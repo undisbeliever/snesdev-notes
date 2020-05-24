@@ -753,7 +753,7 @@ Push to Stack
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
 PHA             | Push Accumulator          | 48    | 1     | 3 | +1 if m=0
-PHB             | Push Data Bank            | 48    | 1     | 3
+PHB             | Push Data Bank            | 8B    | 1     | 3
 PHD             | Push Direct Page Register | 0B    | 1     | 4
 PHK             | Push Program Bank Register| 4B    | 1     | 3
 PHP             | Push Processor Status Register| 08| 1     | 3
