@@ -924,8 +924,8 @@ RTS, RTL - Return From Subroutine
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-RTS             | Stack (return)            | 6B    | 1     | 6
-RTL             | Stack (return long)       | 60    | 1     | 6
+RTS             | Stack (return)            | 60    | 1     | 6
+RTL             | Stack (return long)       | 6B    | 1     | 6
 
 
 
