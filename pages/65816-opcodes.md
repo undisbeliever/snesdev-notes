@@ -543,7 +543,7 @@ NOTE: This is an unsigned operation, the MSB of the result is always 0.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-LSR             | Accumulator               | A4    | 1     | 2
+LSR             | Accumulator               | 4A    | 1     | 2
 LSR addr        | Absolute                  | 4E    | 3     | 6 | +1 if m=0
 LSR dp          | Direct Page               | 46    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
 LSR addr, X     | Absolute Indexed, X       | 5E    | 3     | 7 | +1 if m=0, +1 if index crosses page boundary
