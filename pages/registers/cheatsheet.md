@@ -761,7 +761,7 @@ Sources
 =======
  * Anomie's Register Doc
  * higan source code,
-   [sfc/ppu/io.cpp](https://gitlab.com/higan/higan/blob/master/higan/sfc/ppu/io.cpp) and
-   [sfc/cpu/io.cpp](https://gitlab.com/higan/higan/blob/master/higan/sfc/cpu/io.cpp)
-   by [byuu](https://byuu.org/)
+   [sfc/ppu/io.cpp](https://github.com/higan-emu/higan/blob/master/higan/sfc/ppu/io.cpp) and
+   [sfc/cpu/io.cpp](https://github.com/higan-emu/higan/blob/master/higan/sfc/cpu/io.cpp),
+   by [Near](https://near.sh/)
 
