@@ -95,7 +95,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ASL             | Accumulator               | 0A    | 1     | 2
 ASL addr        | Absolute                  | 0E    | 3     | 6 | +2 if m=0
 ASL dp          | Direct Page               | 06    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-ASL addr, X     | Absolute Indexed, X       | 1E    | 3     | 7 | +2 if m=0, +1 if index crosses page boundary
+ASL addr, X     | Absolute Indexed, X       | 1E    | 3     | 7 | +2 if m=0
 ASL dp, X       | Direct Page Indexed, X    | 16    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
@@ -308,7 +308,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 DEC             | Accumulator               | 3A    | 1     | 2
 DEC addr        | Absolute                  | CE    | 3     | 6 | +2 if m=0
 DEC dp          | Direct Page               | C6    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-DEC addr, X     | Absolute Indexed, X       | DE    | 3     | 7 | +2 if m=0, +1 if index crosses page boundary
+DEC addr, X     | Absolute Indexed, X       | DE    | 3     | 7 | +2 if m=0
 DEC dp, X       | Direct Page Indexed, X    | D6    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
@@ -378,7 +378,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 INC             | Accumulator               | 1A    | 1     | 2
 INC addr        | Absolute                  | EE    | 3     | 6 | +2 if m=0
 INC dp          | Direct Page               | E6    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-INC addr, X     | Absolute Indexed, X       | FE    | 3     | 7 | +2 if m=0, +1 if index crosses page boundary
+INC addr, X     | Absolute Indexed, X       | FE    | 3     | 7 | +2 if m=0
 INC dp, X       | Direct Page Indexed, X    | F6    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
@@ -546,7 +546,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 LSR             | Accumulator               | 4A    | 1     | 2
 LSR addr        | Absolute                  | 4E    | 3     | 6 | +1 if m=0
 LSR dp          | Direct Page               | 46    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-LSR addr, X     | Absolute Indexed, X       | 5E    | 3     | 7 | +1 if m=0, +1 if index crosses page boundary
+LSR addr, X     | Absolute Indexed, X       | 5E    | 3     | 7 | +1 if m=0
 LSR dp, X       | Direct Page Indexed, X    | 56    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
@@ -845,7 +845,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ROL             | Accumulator               | 2A    | 1     | 2
 ROL addr        | Absolute                  | 2E    | 3     | 6 | +1 if m=0
 ROL dp          | Direct Page               | 26    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ROL addr, X     | Absolute Indexed, X       | 3E    | 3     | 7 | +1 if m=0, +1 if index crosses page boundary
+ROL addr, X     | Absolute Indexed, X       | 3E    | 3     | 7 | +1 if m=0
 ROL dp, X       | Direct Page Indexed, X    | 36    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
@@ -867,7 +867,7 @@ Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ROR             | Accumulator               | 6A    | 1     | 2
 ROR addr        | Absolute                  | 6E    | 3     | 6 | +1 if m=0
 ROR dp          | Direct Page               | 66    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ROR addr, X     | Absolute Indexed, X       | 7E    | 3     | 7 | +1 if m=0, +1 if index crosses page boundary
+ROR addr, X     | Absolute Indexed, X       | 7E    | 3     | 7 | +1 if m=0
 ROR dp, X       | Direct Page Indexed, X    | 76    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
