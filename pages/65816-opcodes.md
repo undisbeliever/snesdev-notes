@@ -1149,9 +1149,9 @@ TRB - Test and Reset Memory Bits Against Accumulator
 
 **Flags affected**: `------z-`
 
-`M` ← `M & (~A)`
+`z` ← Set if logical AND of memory and Accumulator is zero
 <br/>
-<br/>`z` ← Set if logical AND of memory and Accumulator is zero
+<br/>`M` ← `M & (~A)`
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -1166,9 +1166,9 @@ TSB - Test and Set Memory Bits Against Accumulator
 
 **Flags affected**: `------z-`
 
-`M` ← `M | A`
+`z` ← Set if logical AND of memory and Accumulator is zero
 <br/>
-<br/>`z` ← Set if logical AND of memory and Accumulator is zero
+<br/>`M` ← `M | A`
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
