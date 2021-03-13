@@ -11,7 +11,7 @@ internals but rather the change in machine state.
 The phrase *+1 if index crosses page boundary* means +1 cycle if:
 
  * The Index register is 16 bits, or
- * `(Addr + Index) & 0xffff00` ≠ `Addr 0xffff00`
+ * `(Addr + Index) & 0xffff00` ≠ `Addr & 0xffff00`
 
 
 ADC - Add with Carry
