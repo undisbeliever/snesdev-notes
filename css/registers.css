@@ -1,0 +1,102 @@
+
+
+table.register-cheatsheet {
+    border-collapse: collapse;
+
+    min-width: 100%;
+    table-layout: fixed;
+
+    text-align: center;
+
+    border: 1px solid $register-border-color;
+}
+
+// Fix border around table
+table.register-cheatsheet thead {
+    border-top: 1px solid $register-border-color;
+}
+table.register-cheatsheet tr {
+    border-right: 1px solid $register-border-color;
+}
+table.register-cheatsheet tr:last-child {
+    border-bottom: 1px solid $register-border-color;
+}
+
+
+// Cell borders
+table.register-cheatsheet col.address {
+    border-left: 1px solid $register-border-color;
+    border-right: 1px solid $register-bits-color;
+}
+table.register-cheatsheet col.timing,
+table.register-cheatsheet col.register {
+    border-right: 1px solid $register-border-color;
+}
+
+table.register-cheatsheet col.bits {
+    border: 1px solid $register-bits-color;
+}
+
+table.register-cheatsheet tr.reg {
+    border-top: 1px solid $register-border-color;
+}
+
+table.register-cheatsheet tr.reg-bits {
+    border-top: 1px solid $register-bits-color;
+}
+
+
+// disable background color
+table.register-cheatsheet tr {
+    background-color: unset !important;
+}
+table.register-cheatsheet th {
+    background-color: $register-th-color;
+}
+
+table.register-cheatsheet th,
+table.register-cheatsheet td {
+    border: unset !important;
+}
+
+
+
+aside.register {
+    float: right;
+    width: 300px;
+    max-width: 95%;
+
+    margin: 0;
+    padding-top: 0;
+    padding-left: 2ex;
+    padding-right: 0;
+    padding-bottom: 1ex;
+
+    background: none;
+    border: none;
+}
+
+aside.register table {
+    width: 100%;
+
+    margin-top: 0;
+}
+
+
+table.register {
+    clear: both;
+
+    padding-right: 3ex;
+
+    text-align: center;
+}
+
+table.register th {
+    width: 10ex;
+}
+
+
+figure.fixed-width {
+    width: 70%;
+}
+

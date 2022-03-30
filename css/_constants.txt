@@ -1,0 +1,5 @@
+
+register-th-color       = #eee;
+register-border-color   = #444;
+register-bits-color     = #aaa;
+
