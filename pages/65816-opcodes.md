@@ -413,6 +413,14 @@ JMP, JML - Jump
 <br/><tt>PB:PC</tt> ← `M`
 
 
+<br/>
+NOTES:
+
+ * The `JMP (addr)` instruction will always read the new program counter from Bank 0 (ie, `JMP ($8888)` will read 2 bytes from `$00:8888`).
+ * The `JML [addr]` instruction will always read the new program counter from Bank 0 (ie, `JML [$9999]` will read 3 bytes from `$00:9999`).
+ * The `JMP (addr, X)` instruction will read the new program counter from the Program Bank (`PB`) (ie, `JMP ($AAAA, X)` will read 2 bytes from `PB:{$AAAA + X}`).
+
+
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
 JMP addr        | Absolute                  | 4C    | 3     | 3
@@ -444,6 +452,10 @@ JSR, JSL - Jump to Subroutine
 <br/><tt>[SP+2]</tt> ← `PC.h`
 <br/><tt>[SP+1]</tt> ← `PC.l`
 <br/><tt>PB:PC&nbsp;</tt> ← `M`
+
+
+<br/>
+NOTE: The `JSR (addr, X)` instruction will read the subroutine address from the Program Bank (`PB`) (ie, `JSR {$8888, X}` will read 2 bytes from `PB:{$8888 + X}`).
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
