@@ -1,0 +1,6 @@
+
+snes-test-roms/inidisp_forgot_to_force_blank.sfc
+
+Captured on my 1-chip SFC console.
+
+

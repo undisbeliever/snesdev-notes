@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" version="1.1" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>Possible INIDISP DAC Layout</title>
+ <style>
+path, rect {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5;
+}
+rect {
+  fill: #fff;
+}
+circle {
+  stroke: none;
+  fill: #000;
+}
+path.arrow {
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 1;
+}
+.bus-lines path {
+  stroke-width: 3;
+}
+text {
+  fill: #000;
+  stroke: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: start;
+  text-anchor: start;
+}
+text.center {
+  text-align: center;
+  text-anchor: middle;
+}
+text.right {
+  text-align: right;
+  text-anchor: end;
+}
+text.vref {
+  font-size: 10px;
+}</style>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Possible INIDISP DAC Layout</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>UnDisbeliever</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <cc:license rdf:resource=""/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <symbol id="dac-4-bit">
+   <path class="arrow" d="m72 45.464 6-3.4641-6-3.4641"/>
+   <rect x="12" y="12" width="60" height="60"/>
+   <path d="m12 24h-12"/>
+   <path d="m12 36h-12"/>
+   <path d="m12 48h-12"/>
+   <path d="m12 60h-12"/>
+   <text class="center" x="42" y="39"><tspan x="42" y="39">4 bit</tspan><tspan x="42" y="54">DAC</tspan></text>
+   <text class="vref" x="44" y="9">Vref</text>
+  </symbol>
+  <symbol id="dac-5-bit">
+   <path class="arrow" d="m72 45.464 6-3.4641-6-3.4641"/>
+   <rect x="12" y="12" width="60" height="60"/>
+   <path d="m12 18h-12"/>
+   <path d="m12 30h-12"/>
+   <path d="m12 42h-12"/>
+   <path d="m12 54h-12"/>
+   <path d="m12 66h-12"/>
+   <text class="center" x="42" y="39"><tspan x="42" y="39">5 bit</tspan><tspan x="42" y="54">DAC</tspan></text>
+   <text class="vref" x="44" y="9">Vref</text>
+  </symbol>
+ </defs>
+ <g>
+  <path d="m138 84v-12h-132"/>
+  <path d="m306 222v-12h-84v-192h84v12m-138 84h138v12"/>
+  <path d="m336 60h58"/>
+  <path d="m336 156h58"/>
+  <path d="m336 252h58"/>
+  <circle cx="222" cy="114" r="3"/>
+ </g>
+ <use transform="translate(96,72)" xlink:href="#dac-4-bit"/>
+ <use transform="translate(264,18)" xlink:href="#dac-5-bit"/>
+ <use transform="translate(264,114)" xlink:href="#dac-5-bit"/>
+ <use transform="translate(264,210)" xlink:href="#dac-5-bit"/>
+ <g class="bus-lines">
+  <path d="m6 150h84l6-6v-48.75"/>
+  <path d="m6 186h246l6-6v-84l6-6v-54.75" style="stroke:#00f"/>
+  <path d="m6 192h252l6-6v-54.75" style="stroke:#080"/>
+  <path d="m6 198h252l6 6v72.75" style="stroke:#f00"/>
+ </g>
+ <g>
+  <text x="8" y="144">brightness</text>
+  <text x="8" y="180">current pixel</text>
+  <text x="8" y="67">Vref</text>
+  <text class="right" x="392" y="55">blue</text>
+  <text class="right" x="392" y="151">green</text>
+  <text class="right" x="392" y="247">red</text>
+ </g>
+</svg>

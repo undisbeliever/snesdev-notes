@@ -1,0 +1,6 @@
+
+Modified unnamed-snes-game to show 25 crossbow men.
+
+Also modified the crossbow men's process() routine to not do anything
+and waste a lot of CPU time.
+

@@ -1,0 +1,14 @@
+
+
+snes-test-roms/inidisp_forgot_to_force_blank_2.sfc
+
+
+I have observed over 10 different outputs when executing the same
+`inidisp_forgot_to_force_blank_2.sfc` binary and resetting the console.
+
+
+The screen captures on the left are from my 3-chip 2/1/3 SFC console.
+
+The screen captures on the right are from my 1-chip SFC console.
+
+

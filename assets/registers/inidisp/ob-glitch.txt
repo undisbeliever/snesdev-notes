@@ -1,0 +1,18 @@
+
+Lossless JPEG cropping using jpegtran
+
+
+ob-glitch-hdma-3chip-raw.jpeg
+ob-glitch-hammer-0f8f-3chip-raw.jpeg
+    jpegtran -strict -perfect -copy none -optimize -crop 928x320+496+384
+
+
+ob-glitch-hammer-0f8f-3chip-raw.jpeg
+    jpegtran -strict -perfect -copy none -optimize -crop 512x256+624+400
+
+
+ob-glitch-hammer-0f8f-3chip-raw.jpeg
+ob-glitch-hammer-8f0f-3chip.jpeg
+    jpegtran -strict -perfect -copy none -optimize -crop 512x256+112+736
+
+

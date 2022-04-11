@@ -21,7 +21,7 @@ nosidebar: True
 <tbody>
 <tr class="reg">
  <th>$2100</th>
- <th>INIDISP</th>
+ <th><a href="inidisp">INIDISP</a></th>
  <td>write<br/>any</td>
  <td>Force blank</td><td>-</td><td>-</td><td>-</td><td colspan=4>Brightness</td>
 </tr>

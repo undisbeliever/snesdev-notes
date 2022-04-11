@@ -1,0 +1,13 @@
+
+
+snes-test-roms/inidisp_enable_display_mid_frame.sfc
+
+
+Captured on my 1-CHIP SFC console.
+
+
+Lossless JPEG cropping using jpegtran
+
+    jpegtran -strict -perfect -copy none -optimize -crop 768x160+288+384
+
+

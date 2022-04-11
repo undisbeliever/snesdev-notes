@@ -1,0 +1,10 @@
+
+cpu-usage-meter-frame-08.jpeg
+    * 15 scanlines of full brightness
+    * (224 - 15) / 262 = 79.8% CPU free, 20.2% CPU used
+
+cpu-usage-meter-frame-09.jpeg
+    * 25 ½ scanlines of full brightness
+    * (224 - 25.5) / 262 = 75.8% CPU free, 24.2% CPU used
+
+
