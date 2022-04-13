@@ -36,6 +36,7 @@ Brightness
 The *brightness* bits control the intensity of the video output.
 Brightness 15 (`b1111`) will output full intensity and brightness 0
 (`b0000`) will output a very weak (but not black) signal.
+[^brightness-measurements]
 
 Internally the *bightness* bits are connected to a 4 bit
 Digital-to-Analog converter inside S-PPU2, whose output is used as
@@ -46,6 +47,7 @@ reference voltage for the Blue-Green-Red DACs.  [^brightness-dac]
  <figcaption>Possible DAC Layout for the INIDISP Register</figcaption>
 </figure>
 
+[^brightness-measurements]: [Brightness DAC measurements by lidnariq](https://forums.nesdev.org/viewtopic.php?p=257831#p257831)
 [^brightness-dac]: [SNES-Chips decapped (2PPU, 1CHIP, APU, DSP) - circuit-board.de forum](https://circuit-board.de/forum/index.php/Thread/25396-SNES-Chips-decapped-2PPU-1CHIP-APU-DSP/)
 
 
