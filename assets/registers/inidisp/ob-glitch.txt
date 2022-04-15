@@ -8,11 +8,12 @@ ob-glitch-hammer-0f8f-3chip.jpeg
 
 
 ob-glitch-hammer-8f0f-3chip.jpeg
-ob-glitch-hammer-0f00-3chip.jpeg
+ob-glitch-hammer-0f00-3chip-bg.jpeg
 ob-glitch-hammer-0f8f-3chip-bg.jpeg
     convert <INPUT> -crop 512x256+112+736 -adaptive-resize '75%x100%!' +repage -quality 95% -interlace Line -sampling-factor 1x1 <OUT>
 
 
+ob-glitch-hammer-0f00-3chip-obj.jpeg
 ob-glitch-hammer-0f8f-3chip-obj.jpeg
     convert <INPUT> -crop 512x256+624+400 -adaptive-resize '75%x100%!' +repage -quality 95% -interlace Line -sampling-factor 1x1 <OUT>
 

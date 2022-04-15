@@ -396,7 +396,8 @@ This hardware bug can result in the following glitches:
     bit 7 (MSB) set.
 
     <figure class="fixed-width">
-     <img src="ob-glitch-hammer-0f00-3chip.jpeg" alt="Cropped screen capture showing faint dots above BG tiles" />
+     <img src="ob-glitch-hammer-0f00-3chip-obj.jpeg" alt="Cropped screen capture showing faint dots above background and object tiles" />
+     <img src="ob-glitch-hammer-0f00-3chip-bg.jpeg" alt="Cropped screen capture showing faint dots above background tiles" />
      <figcaption>
       Tiny dots on the screen, no tile corruption.  
       Test ROM that repeatedly writes `0x0f` to `INIDISP` when the previous value on the data-bus was `0x00`.  
