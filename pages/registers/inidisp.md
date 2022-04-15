@@ -88,7 +88,7 @@ address bus corruption.
    write to the wrong OAM address.
 
 
-<figure markdown="span">
+<figure class="fixed-width" markdown="span">
  <img src="forgot-to-force-blank.jpeg" alt="A screen capture of grabage tiles" />
  <figcaption markdown="1">
   Garbage tiles when transferring a large amount of data to VRAM without enabling *force-blank*.
@@ -96,7 +96,7 @@ address bus corruption.
  </figcaption>
 </figure>
 
-<figure markdown="span">
+<figure class="fixed-width" markdown="span">
  <img src="forgot-to-force-blank-2.png" alt="Four screen captures of corrupted CGRAM and OAM" />
  <figcaption markdown="1">
   Corrupted CGRAM and OAM when transferring data outside of the blanking periods.
@@ -242,7 +242,7 @@ create graphical glitches.
 Activating the display during Horizontal Blank can cause sprite glitches
 on the next scanline.
 
-<figure markdown="span">
+<figure class="fixed-width" markdown="span">
   <img src="enable-display-hblank.jpeg" alt="enable display during h-blank screen capture (cropped)" />
   <figcaption markdown="1">Object tile corruption (green) and single scanline with missing object tiles when clearing *force-blank* during Horizontal Blank.  
 
@@ -254,7 +254,7 @@ Activating the display in the middle of a scanline can cause tile
 glitches for the current scanline and sprite glitches for the next two
 scanlines.
 
-<figure markdown="span">
+<figure class="fixed-width" markdown="span">
   <img src="enable-display-mid-scanline.jpeg" alt="enable display mid-scanline screen capture (cropped)" />
   <figcaption markdown="1">BG tile corruption (red), object tile corruption (green) and two scanlines containing missing object tiles when clearing *force-blank* outside Horizontal and Vertical Blanking period.  
 Recorded on a 1-CHIP SFC console [(raw screen capture)](enable-display-mid-scanline-raw.jpeg).  3-chip consoles show similar output.</figcaption>
