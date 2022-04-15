@@ -1,5 +1,6 @@
 ---
 title: INIDISP Register
+date: 11 April 2022
 tags: SnesDev, Registers
 ---
 
