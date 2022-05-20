@@ -165,11 +165,12 @@ Software Interrupts
 <br/><tt>[SP+3]</tt> ← `PC.h`
 <br/><tt>[SP+2]</tt> ← `PC.l`
 <br/><tt>[SP+1]</tt> ← `P`
-<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 <br/>
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/>
+<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
 **Emulation Mode:**
@@ -177,11 +178,12 @@ Software Interrupts
 <br/><tt>[SP+3]</tt> ← `PC.h`
 <br/><tt>[SP+2]</tt> ← `PC.l`
 <br/><tt>[SP+1]</tt> ← `P`
-<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 <br/>
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/>
+<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
