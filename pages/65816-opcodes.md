@@ -1226,7 +1226,8 @@ WDM - Reserved for Future Expansion
 On the SNES it does nothing. This instruction should not be used in your
 program.
 
-Note, the bsnes-plus debugger can set a breakpoint on this instruction.
+NOTE: The bsnes-plus and Mesen-S debuggers have a setting that changes
+`WDM` instructions into software breakpoints.
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
