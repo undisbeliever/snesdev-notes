@@ -166,7 +166,7 @@ Software Interrupts
 <br/><tt>[SP+2]</tt> ← `PC.l`
 <br/><tt>[SP+1]</tt> ← `P`
 <br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 <br/>
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
@@ -178,7 +178,7 @@ Software Interrupts
 <br/><tt>[SP+2]</tt> ← `PC.l`
 <br/><tt>[SP+1]</tt> ← `P`
 <br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 <br/>
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
