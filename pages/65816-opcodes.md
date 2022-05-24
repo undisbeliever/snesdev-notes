@@ -201,13 +201,13 @@ Clear Status Flags
 <br/>**Flags affected (`CLI`)**: `-----i--`
 <br/>**Flags affected (`CLV`)**: `-v------`
 
-**CEC:**
+**CLC:**
 <br/>`c` ← `0`
 
-**CED:**
+**CLD:**
 <br/>`d` ← `0`
 
-**CEI:**
+**CLI:**
 <br/>`i` ← `0`
 
 **CLV:**
