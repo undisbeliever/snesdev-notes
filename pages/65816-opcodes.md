@@ -423,15 +423,21 @@ NOTES:
  * The `JMP (addr, X)` instruction will read the new program counter from the Program Bank (`PB`) (ie, `JMP ($AAAA, X)` will read 2 bytes from `PB:{$AAAA + X}`).
 
 
-Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
-----------------|---------------------------|-------|-------|--------|--------
-JMP addr        | Absolute                  | 4C    | 3     | 3
-JMP (addr)      | Absolute Indirect         | 6C    | 3     | 5
-JMP (addr, X)   | Absolute Indexed Indirect, X | 7C | 3     | 6
-JMP long        |                           |       |       |
-JML long        | Absolute Long             | 5C    | 4     | 4
-JMP [addr]      |                           |       |       |
-JML [addr]      | Absolute Indirect Long    | DC    | 3     | 6
+<table>
+<thead>
+  <tr>              <th>Syntax</th>         <th>Addressing Mode</th>                <th>Opcode</th> <th>Bytes</th> <th>Cycles</th> <th>Extra</th> </tr>
+</thead>
+<tbody>
+  <tr class="odd">  <td>JMP addr</td>       <td>Absolute</td>                       <td>4C</td> <td>3</td> <td>3</td> <td></td> </tr>
+  <tr class="even"> <td>JMP (addr)</td>     <td>Absolute Indirect</td>              <td>6C</td> <td>3</td> <td>5</td> <td></td> </tr>
+  <tr class="odd">  <td>JMP (addr, X)</td>  <td>Absolute Indexed Indirect, X</td>   <td>7C</td> <td>3</td> <td>6</td> <td></td> </tr>
+
+  <tr class="even"> <td>JML long</td>       <td rowspan="2">Absolute Long</td>          <td rowspan="2">5C</td> <td rowspan="2">4</td> <td rowspan="2">4</td> <td rowspan="2"></td> </tr>
+  <tr class="even"> <td>JMP long</td> </tr>
+  <tr class="odd">  <td>JML [addr]</td>     <td rowspan="2">Absolute Indirect Long</td> <td rowspan="2">DC</td> <td rowspan="2">3</td> <td rowspan="2">6</td> <td rowspan="2"></td> </tr>
+  <tr class="odd">  <td>JMP [addr]</td> </tr>
+</tbody>
+</table>
 
 
 
