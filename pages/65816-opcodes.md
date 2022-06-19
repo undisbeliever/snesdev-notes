@@ -1260,13 +1260,20 @@ XCE - Exchange Carry and Emulation Bits
 
 **Flags affected**: `--mx---c : e`
 
-`c` ← Previous e flag
-<br/>`e` ← Previous c flag
-<br/>`m` set if enabling native mode
-<br/>`x` set if enabling native mode
+`c` ← Previous `e` flag
+<br/>`e` ← Previous `c` flag
+<br/>
+<br/>
+**if e is set (Emulation Mode):**
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>m&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>x&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>SP.h</tt> ← `0x01`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>X.h&nbsp;</tt> ← `0x00`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>Y.h&nbsp;</tt> ← `0x00`
 
-Note: If bit 4 (x) of the status register is set, then the high byte of
-the index registers will be set to 0.
+Note: The high byte of the Stack Pointer is fixed in emulation mode.
+
+Note: Emulation mode will set bit 4 (x) of the status register, which will also set the high byte of the index registers to 0.
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
