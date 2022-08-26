@@ -1123,8 +1123,8 @@ Transfer Registers
 
 `Rd` ← `Rs`
 <br/>
-<br/>`n` ← Most significant bit of register
-<br/>`z` ← Set if the register is zero
+<br/>`n` ← Most significant bit of the transferred value
+<br/>`z` ← Set if the transferred value is zero
 
 The number of bits transferred depends on the state of the m, x and e
 flags:
