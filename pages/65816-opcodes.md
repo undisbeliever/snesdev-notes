@@ -1126,12 +1126,10 @@ Transfer Registers
 <br/>`n` ← Most significant bit of the transferred value
 <br/>`z` ← Set if the transferred value is zero
 
-The number of bits transferred depends on the state of the m, x and e
-flags:
+The number of bits transferred depends on the state of the m, x and e flags:
 
  * Accumulator to Index:
-    * 8 bit Index (x=1): 8 bits transferred, high byte of Accumulator is
-      unchanged
+    * 8 bit Index (x=1): 8 bits transferred
     * 16 bit Index (x=0): 16 bits transferred, no matter the state of m
  * Accumulator to/from Direct Page: 16 bits transferred
  * Index to Accumulator:
