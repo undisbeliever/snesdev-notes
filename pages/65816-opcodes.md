@@ -1136,7 +1136,7 @@ flags:
  * Accumulator to/from Direct Page: 16 bits transferred
  * Index to Accumulator:
     * 8 bit A (m=1): 8 bits transferred
-    * 16 bit A (m=0): 16 bits transferred (when x=0, the high byte is 0)
+    * 16 bit A (m=0): 16 bits transferred (when x=1 (8 bit index), the high byte is 0)
  * Stack Pointer to X:
     * 8 bit Index (x=1): 8 bits transferred, high byte of X = 0
     * 16 bit Index (x=0): 16 bits transferred
