@@ -1230,13 +1230,22 @@ WDM - Reserved for Future Expansion
 On the SNES it does nothing. This instruction should not be used in your
 program.
 
-NOTE: The bsnes-plus and Mesen-S debuggers have a setting that changes
-`WDM` instructions into software breakpoints.
+The bsnes-plus and Mesen-S debuggers have a setting that changes `WDM`
+instructions into software breakpoints.
 
+This instruction has a non-standard syntax.  Some assemblers will use `wdm #1`,
+while other assemblers use `wdm 1`.
 
-Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
-----------------|---------------------------|-------|-------|--------|--------
-WDM             | Implied                   | 42    | 2     | 2 | 
+<table>
+<thead>
+<tr><th>Syntax</th><th>Addressing Mode</th><th>Opcode</th><th>Bytes</th><th>Cycles</th><th>Extra</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>WDM #const</td><td rowspan="2"></td><td rowspan="2">42</td><td rowspan="2">2</td><td rowspan="2">2</td><td rowspan="2"></td></tr>
+<tr><td>WDM param</td></tr>
+</tbody>
+</table>
 
 
 
