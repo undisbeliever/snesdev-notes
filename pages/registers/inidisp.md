@@ -2,6 +2,9 @@
 title: INIDISP Register
 date: 11 April 2022
 tags: SnesDev, Registers
+copyright: © 2022 undisbeliever
+license: CC BY-SA 4.0
+license-url: https://creativecommons.org/licenses/by-sa/4.0/
 ---
 
 <!-- ::TODO Add timing page (and link VBlank to it) :: -->

@@ -1,6 +1,9 @@
 ---
 title: 65816 Opcodes
 tags: SnesDev
+copyright: © 2019 undisbeliever with contributions by InsaneFirebat
+license: CC BY-SA 4.0
+license-url: https://creativecommons.org/licenses/by-sa/4.0/
 ---
 
 Notes about this document:

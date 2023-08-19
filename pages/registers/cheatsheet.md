@@ -2,6 +2,9 @@
 title: Register Cheat Sheet
 tags: SnesDev, Registers
 nosidebar: True
+copyright: © 2019 undisbeliever
+license: CC BY-SA 4.0
+license-url: https://creativecommons.org/licenses/by-sa/4.0/
 ---
 
 <table class="register-cheatsheet" markdown>
