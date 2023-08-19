@@ -29,21 +29,21 @@ ADC - Add with Carry
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-ADC #const      | Immediate                 | 69    | 2 / 3 | 2 | +1 if m=0
-ADC addr        | Absolute                  | 6D    | 3     | 4 | +1 if m=0
-ADC long        | Absolute Long             | 6F    | 4     | 5 | +1 if m=0
-ADC dp          | Direct Page               | 65    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-ADC (dp)        | Direct Page Indirect      | 72    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ADC [dp]        | Direct Page Indirect Long | 67    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ADC addr, X     | Absolute Indexed, X       | 7D    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-ADC long, X     | Absolute Long Indexed, X  | 7F    | 4     | 5 | +1 if m=0
-ADC addr, Y     | Absolute Indexed, Y       | 79    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-ADC dp, X       | Direct Page Indexed, X    | 75    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-ADC (dp, X)     | Direct Page Indirect, X   | 61    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ADC (dp), Y     | DP Indirect Indexed, Y    | 71    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-ADC [dp], Y     | DP Indirect Long Indexed, Y | 77  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ADC sr, S       | Stack Relative            | 63    | 2     | 4 | +1 if m=0
-ADC (sr, S), Y  | SR Indirect Indexed, Y    | 73    | 2     | 7 | +1 if m=0
+ADC #const      | Immediate                 | $69   | 2 / 3 | 2 | +1 if m=0
+ADC addr        | Absolute                  | $6D   | 3     | 4 | +1 if m=0
+ADC long        | Absolute Long             | $6F   | 4     | 5 | +1 if m=0
+ADC dp          | Direct Page               | $65   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+ADC (dp)        | Direct Page Indirect      | $72   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+ADC [dp]        | Direct Page Indirect Long | $67   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ADC addr, X     | Absolute Indexed, X       | $7D   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+ADC long, X     | Absolute Long Indexed, X  | $7F   | 4     | 5 | +1 if m=0
+ADC addr, Y     | Absolute Indexed, Y       | $79   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+ADC dp, X       | Direct Page Indexed, X    | $75   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+ADC (dp, X)     | Direct Page Indirect, X   | $61   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ADC (dp), Y     | DP Indirect Indexed, Y    | $71   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+ADC [dp], Y     | DP Indirect Long Indexed, Y | $77 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ADC sr, S       | Stack Relative            | $63   | 2     | 4 | +1 if m=0
+ADC (sr, S), Y  | SR Indirect Indexed, Y    | $73   | 2     | 7 | +1 if m=0
 
 
 
@@ -60,21 +60,21 @@ AND - And Accumulator with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-AND #const      | Immediate                 | 29    | 2 / 3 | 2 | +1 if m=0
-AND addr        | Absolute                  | 2D    | 3     | 4 | +1 if m=0
-AND long        | Absolute Long             | 2F    | 4     | 5 | +1 if m=0
-AND dp          | Direct Page               | 25    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-AND (dp)        | Direct Page Indirect      | 32    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-AND [dp]        | Direct Page Indirect Long | 27    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-AND addr, X     | Absolute Indexed, X       | 3D    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-AND long, X     | Absolute Long Indexed, X  | 3F    | 4     | 5 | +1 if m=0
-AND addr, Y     | Absolute Indexed, Y       | 39    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-AND dp, X       | Direct Page Indexed, X    | 35    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-AND (dp, X)     | Direct Page Indirect, X   | 21    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-AND (dp), Y     | DP Indirect Indexed, Y    | 31    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-AND [dp], Y     | DP Indirect Long Indexed, Y | 37  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-AND sr, S       | Stack Relative            | 23    | 2     | 4 | +1 if m=0
-AND (sr, S), Y  | SR Indirect Indexed, Y    | 33    | 2     | 7 | +1 if m=0
+AND #const      | Immediate                 | $29   | 2 / 3 | 2 | +1 if m=0
+AND addr        | Absolute                  | $2D   | 3     | 4 | +1 if m=0
+AND long        | Absolute Long             | $2F   | 4     | 5 | +1 if m=0
+AND dp          | Direct Page               | $25   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+AND (dp)        | Direct Page Indirect      | $32   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+AND [dp]        | Direct Page Indirect Long | $27   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+AND addr, X     | Absolute Indexed, X       | $3D   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+AND long, X     | Absolute Long Indexed, X  | $3F   | 4     | 5 | +1 if m=0
+AND addr, Y     | Absolute Indexed, Y       | $39   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+AND dp, X       | Direct Page Indexed, X    | $35   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+AND (dp, X)     | Direct Page Indirect, X   | $21   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+AND (dp), Y     | DP Indirect Indexed, Y    | $31   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+AND [dp], Y     | DP Indirect Long Indexed, Y | $37 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+AND sr, S       | Stack Relative            | $23   | 2     | 4 | +1 if m=0
+AND (sr, S), Y  | SR Indirect Indexed, Y    | $33   | 2     | 7 | +1 if m=0
 
 
 
@@ -92,11 +92,11 @@ ASL - Arithmetic Shift Left
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-ASL             | Accumulator               | 0A    | 1     | 2
-ASL addr        | Absolute                  | 0E    | 3     | 6 | +2 if m=0
-ASL dp          | Direct Page               | 06    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-ASL addr, X     | Absolute Indexed, X       | 1E    | 3     | 7 | +2 if m=0
-ASL dp, X       | Direct Page Indexed, X    | 16    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
+ASL             | Accumulator               | $0A   | 1     | 2
+ASL addr        | Absolute                  | $0E   | 3     | 6 | +2 if m=0
+ASL dp          | Direct Page               | $06   | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
+ASL addr, X     | Absolute Indexed, X       | $1E   | 3     | 7 | +2 if m=0
+ASL dp, X       | Direct Page Indexed, X    | $16   | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -117,16 +117,16 @@ Branches
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-BCC near        | Branch if Carry Clear     | 90    | 2     | 2 | +1 if branch taken, +1 if e=1
-BCS near        | Branch if Carry Set       | B0    | 2     | 2 | +1 if branch taken, +1 if e=1
-BEQ near        | Branch if Equal (z flag=1)| F0    | 2     | 2 | +1 if branch taken, +1 if e=1
-BNE near        | Branch if Not Equal (z=0) | D0    | 2     | 2 | +1 if branch taken, +1 if e=1
-BMI near        | Branch if Minus           | 30    | 2     | 2 | +1 if branch taken, +1 if e=1
-BPL near        | Branch if Plus            | 10    | 2     | 2 | +1 if branch taken, +1 if e=1
-BVC near        | Branch if Overflow Clear  | 50    | 2     | 2 | +1 if branch taken, +1 if e=1
-BVS near        | Branch if Overflow Set    | 70    | 2     | 2 | +1 if branch taken, +1 if e=1
-BRA near        | Branch Always             | 80    | 2     | 3 | +1 if e=1
-BRL label       | Branch Always Long        | 82 | 3    | 4
+BCC near        | Branch if Carry Clear     | $90   | 2     | 2 | +1 if branch taken, +1 if e=1
+BCS near        | Branch if Carry Set       | $B0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BEQ near        | Branch if Equal (z flag=1)| $F0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BNE near        | Branch if Not Equal (z=0) | $D0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BMI near        | Branch if Minus           | $30   | 2     | 2 | +1 if branch taken, +1 if e=1
+BPL near        | Branch if Plus            | $10   | 2     | 2 | +1 if branch taken, +1 if e=1
+BVC near        | Branch if Overflow Clear  | $50   | 2     | 2 | +1 if branch taken, +1 if e=1
+BVS near        | Branch if Overflow Set    | $70   | 2     | 2 | +1 if branch taken, +1 if e=1
+BRA near        | Branch Always             | $80   | 2     | 3 | +1 if e=1
+BRL label       | Branch Always Long        | $82 | 3    | 4
 
 
 
@@ -146,11 +146,11 @@ BIT - Test Memory Bits against Accumulator
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-BIT #const      | Immediate                 | 89    | 2 / 3 | 2 | +1 if m=0
-BIT addr        | Absolute                  | 2C    | 3     | 4 | +1 if m=0
-BIT dp          | Direct Page               | 24    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-BIT addr, X     | Absolute Indexed, X       | 3C    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-BIT dp, X       | Direct Page Indexed, X    | 34    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+BIT #const      | Immediate                 | $89   | 2 / 3 | 2 | +1 if m=0
+BIT addr        | Absolute                  | $2C   | 3     | 4 | +1 if m=0
+BIT dp          | Direct Page               | $24   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+BIT addr, X     | Absolute Indexed, X       | $3C   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+BIT dp, X       | Direct Page Indexed, X    | $34   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -188,8 +188,8 @@ Software Interrupts
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-BRK param       | Interrupt                 | 00    | 2     | 7 | +1 if e=0
-COP param       | Interrupt                 | 02    | 2     | 7 | +1 if e=0
+BRK param       | Interrupt                 | $00   | 2     | 7 | +1 if e=0
+COP param       | Interrupt                 | $02   | 2     | 7 | +1 if e=0
 
 
 
@@ -215,10 +215,10 @@ Clear Status Flags
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-CLC             | Clear Carry Flag          | 18    | 1     | 2
-CLI             | Clear Interrupt Disable Flag | 58 | 1     | 2
-CLD             | Clear Decimal Flag        | D8    | 1     | 2
-CLV             | Clear Overflow Flag       | B8    | 1     | 2
+CLC             | Clear Carry Flag          | $18   | 1     | 2
+CLI             | Clear Interrupt Disable Flag | $58| 1     | 2
+CLD             | Clear Decimal Flag        | $D8   | 1     | 2
+CLV             | Clear Overflow Flag       | $B8   | 1     | 2
 
 
 
@@ -236,21 +236,21 @@ CMP - Compare Accumulator with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-CMP #const      | Immediate                 | C9    | 2 / 3 | 2 | +1 if m=0
-CMP addr        | Absolute                  | CD    | 3     | 4 | +1 if m=0
-CMP long        | Absolute Long             | CF    | 4     | 5 | +1 if m=0
-CMP dp          | Direct Page               | C5    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-CMP (dp)        | Direct Page Indirect      | D2    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-CMP [dp]        | Direct Page Indirect Long | C7    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-CMP addr, X     | Absolute Indexed, X       | DD    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-CMP long, X     | Absolute Long Indexed, X  | DF    | 4     | 5 | +1 if m=0
-CMP addr, Y     | Absolute Indexed, Y       | D9    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-CMP dp, X       | Direct Page Indexed, X    | D5    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-CMP (dp, X)     | Direct Page Indirect, X   | C1    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-CMP (dp), Y     | DP Indirect Indexed, Y    | D1    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-CMP [dp], Y     | DP Indirect Long Indexed, Y | D7  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-CMP sr, S       | Stack Relative            | C3    | 2     | 4 | +1 if m=0
-CMP (sr, S), Y  | SR Indirect Indexed, Y    | D3    | 2     | 7 | +1 if m=0
+CMP #const      | Immediate                 | $C9   | 2 / 3 | 2 | +1 if m=0
+CMP addr        | Absolute                  | $CD   | 3     | 4 | +1 if m=0
+CMP long        | Absolute Long             | $CF   | 4     | 5 | +1 if m=0
+CMP dp          | Direct Page               | $C5   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+CMP (dp)        | Direct Page Indirect      | $D2   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+CMP [dp]        | Direct Page Indirect Long | $C7   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+CMP addr, X     | Absolute Indexed, X       | $DD   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+CMP long, X     | Absolute Long Indexed, X  | $DF   | 4     | 5 | +1 if m=0
+CMP addr, Y     | Absolute Indexed, Y       | $D9   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+CMP dp, X       | Direct Page Indexed, X    | $D5   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+CMP (dp, X)     | Direct Page Indirect, X   | $C1   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+CMP (dp), Y     | DP Indirect Indexed, Y    | $D1   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+CMP [dp], Y     | DP Indirect Long Indexed, Y | $D7 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+CMP sr, S       | Stack Relative            | $C3   | 2     | 4 | +1 if m=0
+CMP (sr, S), Y  | SR Indirect Indexed, Y    | $D3   | 2     | 7 | +1 if m=0
 
 
 
@@ -268,9 +268,9 @@ CPX - Compare Index Register X with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-CPX #const      | Immediate                 | E0    | 2 / 3 | 2 | +1 if x=0
-CPX addr        | Absolute                  | EC    | 3     | 4 | +1 if x=0
-CPX dp          | Direct Page               | E4    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+CPX #const      | Immediate                 | $E0   | 2 / 3 | 2 | +1 if x=0
+CPX addr        | Absolute                  | $EC   | 3     | 4 | +1 if x=0
+CPX dp          | Direct Page               | $E4   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -288,9 +288,9 @@ CPY - Compare Index Register Y with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-CPY #const      | Immediate                 | C0    | 2 / 3 | 2 | +1 if x=0
-CPY addr        | Absolute                  | CC    | 3     | 4 | +1 if x=0
-CPY dp          | Direct Page               | C4    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+CPY #const      | Immediate                 | $C0   | 2 / 3 | 2 | +1 if x=0
+CPY addr        | Absolute                  | $CC   | 3     | 4 | +1 if x=0
+CPY dp          | Direct Page               | $C4   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -307,11 +307,11 @@ DEC - Decrement
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-DEC             | Accumulator               | 3A    | 1     | 2
-DEC addr        | Absolute                  | CE    | 3     | 6 | +2 if m=0
-DEC dp          | Direct Page               | C6    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-DEC addr, X     | Absolute Indexed, X       | DE    | 3     | 7 | +2 if m=0
-DEC dp, X       | Direct Page Indexed, X    | D6    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
+DEC             | Accumulator               | $3A   | 1     | 2
+DEC addr        | Absolute                  | $CE   | 3     | 6 | +2 if m=0
+DEC dp          | Direct Page               | $C6   | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
+DEC addr, X     | Absolute Indexed, X       | $DE   | 3     | 7 | +2 if m=0
+DEC dp, X       | Direct Page Indexed, X    | $D6   | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -328,8 +328,8 @@ DEX, DEY - Decrement Index Registers
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-DEX             | Implied                   | CA    | 1     | 2
-DEY             | Implied                   | 88    | 1     | 2
+DEX             | Implied                   | $CA   | 1     | 2
+DEY             | Implied                   | $88   | 1     | 2
 
 
 
@@ -346,21 +346,21 @@ EOR - Exclusive OR Accumulator with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-EOR #const      | Immediate                 | 49    | 2 / 3 | 2 | +1 if m=0
-EOR addr        | Absolute                  | 4D    | 3     | 4 | +1 if m=0
-EOR long        | Absolute Long             | 4F    | 4     | 5 | +1 if m=0
-EOR dp          | Direct Page               | 45    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-EOR (dp)        | Direct Page Indirect      | 52    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-EOR [dp]        | Direct Page Indirect Long | 47    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-EOR addr, X     | Absolute Indexed, X       | 5D    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-EOR long, X     | Absolute Long Indexed, X  | 5F    | 4     | 5 | +1 if m=0
-EOR addr, Y     | Absolute Indexed, Y       | 59    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-EOR dp, X       | Direct Page Indexed, X    | 55    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-EOR (dp, X)     | Direct Page Indirect, X   | 41    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-EOR (dp), Y     | DP Indirect Indexed, Y    | 51    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-EOR [dp], Y     | DP Indirect Long Indexed, Y | 57  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-EOR sr, S       | Stack Relative            | 43    | 2     | 4 | +1 if m=0
-EOR (sr, S), Y  | SR Indirect Indexed, Y    | 53    | 2     | 7 | +1 if m=0
+EOR #const      | Immediate                 | $49   | 2 / 3 | 2 | +1 if m=0
+EOR addr        | Absolute                  | $4D   | 3     | 4 | +1 if m=0
+EOR long        | Absolute Long             | $4F   | 4     | 5 | +1 if m=0
+EOR dp          | Direct Page               | $45   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+EOR (dp)        | Direct Page Indirect      | $52   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+EOR [dp]        | Direct Page Indirect Long | $47   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+EOR addr, X     | Absolute Indexed, X       | $5D   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+EOR long, X     | Absolute Long Indexed, X  | $5F   | 4     | 5 | +1 if m=0
+EOR addr, Y     | Absolute Indexed, Y       | $59   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+EOR dp, X       | Direct Page Indexed, X    | $55   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+EOR (dp, X)     | Direct Page Indirect, X   | $41   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+EOR (dp), Y     | DP Indirect Indexed, Y    | $51   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+EOR [dp], Y     | DP Indirect Long Indexed, Y | $57 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+EOR sr, S       | Stack Relative            | $43   | 2     | 4 | +1 if m=0
+EOR (sr, S), Y  | SR Indirect Indexed, Y    | $53   | 2     | 7 | +1 if m=0
 
 
 
@@ -377,11 +377,11 @@ INC - Increment
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-INC             | Accumulator               | 1A    | 1     | 2
-INC addr        | Absolute                  | EE    | 3     | 6 | +2 if m=0
-INC dp          | Direct Page               | E6    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
-INC addr, X     | Absolute Indexed, X       | FE    | 3     | 7 | +2 if m=0
-INC dp, X       | Direct Page Indexed, X    | F6    | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
+INC             | Accumulator               | $1A   | 1     | 2
+INC addr        | Absolute                  | $EE   | 3     | 6 | +2 if m=0
+INC dp          | Direct Page               | $E6   | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
+INC addr, X     | Absolute Indexed, X       | $FE   | 3     | 7 | +2 if m=0
+INC dp, X       | Direct Page Indexed, X    | $F6   | 2     | 6 | +2 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -398,8 +398,8 @@ INX, INY - Increment Index Registers
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-INX             | Implied                   | E8    | 1     | 2
-INY             | Implied                   | C8    | 1     | 2
+INX             | Implied                   | $E8   | 1     | 2
+INY             | Implied                   | $C8   | 1     | 2
 
 
 
@@ -428,13 +428,13 @@ NOTES:
   <tr>              <th>Syntax</th>         <th>Addressing Mode</th>                <th>Opcode</th> <th>Bytes</th> <th>Cycles</th> <th>Extra</th> </tr>
 </thead>
 <tbody>
-  <tr class="odd">  <td>JMP addr</td>       <td>Absolute</td>                       <td>4C</td> <td>3</td> <td>3</td> <td></td> </tr>
-  <tr class="even"> <td>JMP (addr)</td>     <td>Absolute Indirect</td>              <td>6C</td> <td>3</td> <td>5</td> <td></td> </tr>
-  <tr class="odd">  <td>JMP (addr, X)</td>  <td>Absolute Indexed Indirect, X</td>   <td>7C</td> <td>3</td> <td>6</td> <td></td> </tr>
+  <tr class="odd">  <td>JMP addr</td>       <td>Absolute</td>                       <td>$4C</td> <td>3</td> <td>3</td> <td></td> </tr>
+  <tr class="even"> <td>JMP (addr)</td>     <td>Absolute Indirect</td>              <td>$6C</td> <td>3</td> <td>5</td> <td></td> </tr>
+  <tr class="odd">  <td>JMP (addr, X)</td>  <td>Absolute Indexed Indirect, X</td>   <td>$7C</td> <td>3</td> <td>6</td> <td></td> </tr>
 
-  <tr class="even"> <td>JML long</td>       <td rowspan="2">Absolute Long</td>          <td rowspan="2">5C</td> <td rowspan="2">4</td> <td rowspan="2">4</td> <td rowspan="2"></td> </tr>
+  <tr class="even"> <td>JML long</td>       <td rowspan="2">Absolute Long</td>          <td rowspan="2">$5C</td> <td rowspan="2">4</td> <td rowspan="2">4</td> <td rowspan="2"></td> </tr>
   <tr class="even"> <td>JMP long</td> </tr>
-  <tr class="odd">  <td>JML [addr]</td>     <td rowspan="2">Absolute Indirect Long</td> <td rowspan="2">DC</td> <td rowspan="2">3</td> <td rowspan="2">6</td> <td rowspan="2"></td> </tr>
+  <tr class="odd">  <td>JML [addr]</td>     <td rowspan="2">Absolute Indirect Long</td> <td rowspan="2">$DC</td> <td rowspan="2">3</td> <td rowspan="2">6</td> <td rowspan="2"></td> </tr>
   <tr class="odd">  <td>JMP [addr]</td> </tr>
 </tbody>
 </table>
@@ -468,9 +468,9 @@ NOTE: The `JSR (addr, X)` instruction will read the subroutine address from the 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-JSR addr        | Absolute                  | 20    | 3     | 6
-JSR (addr, X)   | Absolute Indexed Indirect, X | FC | 3     | 8
-JSL long        | Absolute Long             | 22    | 4     | 8
+JSR addr        | Absolute                  | $20   | 3     | 6
+JSR (addr, X)   | Absolute Indexed Indirect, X | $FC| 3     | 8
+JSL long        | Absolute Long             | $22   | 4     | 8
 
 
 
@@ -487,21 +487,21 @@ LDA - Load Accumulator from Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-LDA #const      | Immediate                 | A9    | 2 / 3 | 2 | +1 if m=0
-LDA addr        | Absolute                  | AD    | 3     | 4 | +1 if m=0
-LDA long        | Absolute Long             | AF    | 4     | 5 | +1 if m=0
-LDA dp          | Direct Page               | A5    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-LDA (dp)        | Direct Page Indirect      | B2    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-LDA [dp]        | Direct Page Indirect Long | A7    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-LDA addr, X     | Absolute Indexed, X       | BD    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-LDA long, X     | Absolute Long Indexed, X  | BF    | 4     | 5 | +1 if m=0
-LDA addr, Y     | Absolute Indexed, Y       | B9    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-LDA dp, X       | Direct Page Indexed, X    | B5    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-LDA (dp, X)     | Direct Page Indirect, X   | A1    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-LDA (dp), Y     | DP Indirect Indexed, Y    | B1    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-LDA [dp], Y     | DP Indirect Long Indexed, Y | B7  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-LDA sr, S       | Stack Relative            | A3    | 2     | 4 | +1 if m=0
-LDA (sr, S), Y  | SR Indirect Indexed, Y    | B3    | 2     | 7 | +1 if m=0
+LDA #const      | Immediate                 | $A9   | 2 / 3 | 2 | +1 if m=0
+LDA addr        | Absolute                  | $AD   | 3     | 4 | +1 if m=0
+LDA long        | Absolute Long             | $AF   | 4     | 5 | +1 if m=0
+LDA dp          | Direct Page               | $A5   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+LDA (dp)        | Direct Page Indirect      | $B2   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+LDA [dp]        | Direct Page Indirect Long | $A7   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+LDA addr, X     | Absolute Indexed, X       | $BD   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+LDA long, X     | Absolute Long Indexed, X  | $BF   | 4     | 5 | +1 if m=0
+LDA addr, Y     | Absolute Indexed, Y       | $B9   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+LDA dp, X       | Direct Page Indexed, X    | $B5   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+LDA (dp, X)     | Direct Page Indirect, X   | $A1   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+LDA (dp), Y     | DP Indirect Indexed, Y    | $B1   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+LDA [dp], Y     | DP Indirect Long Indexed, Y | $B7 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+LDA sr, S       | Stack Relative            | $A3   | 2     | 4 | +1 if m=0
+LDA (sr, S), Y  | SR Indirect Indexed, Y    | $B3   | 2     | 7 | +1 if m=0
 
 
 
@@ -518,11 +518,11 @@ LDX - Load Index Register X from Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-LDX #const      | Immediate                 | A2    | 2 / 3 | 2 | +1 if x=0
-LDX addr        | Absolute                  | AE    | 3     | 4 | +1 if x=0
-LDX dp          | Direct Page               | A6    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
-LDX addr, Y     | Absolute Indexed, Y       | BE    | 3     | 4 | +1 if x=0, +1 if index crosses page boundary
-LDX dp, Y       | Direct Page Indexed, Y    | B6    | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
+LDX #const      | Immediate                 | $A2   | 2 / 3 | 2 | +1 if x=0
+LDX addr        | Absolute                  | $AE   | 3     | 4 | +1 if x=0
+LDX dp          | Direct Page               | $A6   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+LDX addr, Y     | Absolute Indexed, Y       | $BE   | 3     | 4 | +1 if x=0, +1 if index crosses page boundary
+LDX dp, Y       | Direct Page Indexed, Y    | $B6   | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -539,11 +539,11 @@ LDY - Load Index Register Y from Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-LDY #const      | Immediate                 | A0    | 2 / 3 | 2 | +1 if x=0
-LDY addr        | Absolute                  | AC    | 3     | 4 | +1 if x=0
-LDY dp          | Direct Page               | A4    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
-LDY addr, X     | Absolute Indexed, X       | BC    | 3     | 4 | +1 if x=0, +1 if index crosses page boundary
-LDY dp, X       | Direct Page Indexed, X    | B4    | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
+LDY #const      | Immediate                 | $A0   | 2 / 3 | 2 | +1 if x=0
+LDY addr        | Absolute                  | $AC   | 3     | 4 | +1 if x=0
+LDY dp          | Direct Page               | $A4   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+LDY addr, X     | Absolute Indexed, X       | $BC   | 3     | 4 | +1 if x=0, +1 if index crosses page boundary
+LDY dp, X       | Direct Page Indexed, X    | $B4   | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -563,11 +563,11 @@ NOTE: This is an unsigned operation, the MSB of the result is always 0.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-LSR             | Accumulator               | 4A    | 1     | 2
-LSR addr        | Absolute                  | 4E    | 3     | 6 | +1 if m=0
-LSR dp          | Direct Page               | 46    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-LSR addr, X     | Absolute Indexed, X       | 5E    | 3     | 7 | +1 if m=0
-LSR dp, X       | Direct Page Indexed, X    | 56    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+LSR             | Accumulator               | $4A   | 1     | 2
+LSR addr        | Absolute                  | $4E   | 3     | 6 | +1 if m=0
+LSR dp          | Direct Page               | $46   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+LSR addr, X     | Absolute Indexed, X       | $5E   | 3     | 7 | +1 if m=0
+LSR dp, X       | Direct Page Indexed, X    | $56   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -616,7 +616,7 @@ NOTES:
 
 Syntax                | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------------|---------------------------|-------|-------|--------|--------
-MVN srcBank, destBank | Block Move                | 54    | 3     |  | 7 per byte moved
+MVN srcBank, destBank | Block Move                | $54   | 3     |  | 7 per byte moved
 
 
 
@@ -656,7 +656,7 @@ NOTES:
 
 Syntax                | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------------|---------------------------|-------|-------|--------|--------
-MVP srcBank, destBank | Block Move                | 44    | 3     |  | 7 per byte moved
+MVP srcBank, destBank | Block Move                | $44   | 3     |  | 7 per byte moved
 
 
 
@@ -670,7 +670,7 @@ NOP - No Operation
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-NOP             | Implied                   | EA    | 1     | 2
+NOP             | Implied                   | $EA   | 1     | 2
 
 
 
@@ -687,21 +687,21 @@ ORA - OR Accumulator with Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-ORA #const      | Immediate                 | 09    | 2 / 3 | 2 | +1 if m=0
-ORA addr        | Absolute                  | 0D    | 3     | 4 | +1 if m=0
-ORA long        | Absolute Long             | 0F    | 4     | 5 | +1 if m=0
-ORA dp          | Direct Page               | 05    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-ORA (dp)        | Direct Page Indirect      | 12    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ORA [dp]        | Direct Page Indirect Long | 07    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ORA addr, X     | Absolute Indexed, X       | 1D    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-ORA long, X     | Absolute Long Indexed, X  | 1F    | 4     | 5 | +1 if m=0
-ORA addr, Y     | Absolute Indexed, Y       | 19    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-ORA dp, X       | Direct Page Indexed, X    | 15    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-ORA (dp, X)     | Direct Page Indirect, X   | 01    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ORA (dp), Y     | DP Indirect Indexed, Y    | 11    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-ORA [dp], Y     | DP Indirect Long Indexed, Y | 17  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-ORA sr, S       | Stack Relative            | 03    | 2     | 4 | +1 if m=0
-ORA (sr, S), Y  | SR Indirect Indexed, Y    | 13    | 2     | 7 | +1 if m=0
+ORA #const      | Immediate                 | $09   | 2 / 3 | 2 | +1 if m=0
+ORA addr        | Absolute                  | $0D   | 3     | 4 | +1 if m=0
+ORA long        | Absolute Long             | $0F   | 4     | 5 | +1 if m=0
+ORA dp          | Direct Page               | $05   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+ORA (dp)        | Direct Page Indirect      | $12   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+ORA [dp]        | Direct Page Indirect Long | $07   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ORA addr, X     | Absolute Indexed, X       | $1D   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+ORA long, X     | Absolute Long Indexed, X  | $1F   | 4     | 5 | +1 if m=0
+ORA addr, Y     | Absolute Indexed, Y       | $19   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+ORA dp, X       | Direct Page Indexed, X    | $15   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+ORA (dp, X)     | Direct Page Indirect, X   | $01   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ORA (dp), Y     | DP Indirect Indexed, Y    | $11   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+ORA [dp], Y     | DP Indirect Long Indexed, Y | $17 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ORA sr, S       | Stack Relative            | $03   | 2     | 4 | +1 if m=0
+ORA (sr, S), Y  | SR Indirect Indexed, Y    | $13   | 2     | 7 | +1 if m=0
 
 
 
@@ -717,7 +717,7 @@ PEA - Push Effective Absolute Address
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-PEA addr        | Stack (Absolute)          | F4    | 3     | 5
+PEA addr        | Stack (Absolute)          | $F4   | 3     | 5
 
 
 
@@ -733,7 +733,7 @@ PEI - Push Effective Indirect Address
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-PEI (dp)        | Stack (DP Indirect)       | D4    | 2     | 6 | +1 if DP.l ≠ 0
+PEI (dp)        | Stack (DP Indirect)       | $D4   | 2     | 6 | +1 if DP.l ≠ 0
 
 
 
@@ -751,7 +751,7 @@ PER - Push Effective PC Relative Indirect Address
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-PER label       | Stack (PC Relative Long)  | 62    | 3     | 6
+PER label       | Stack (PC Relative Long)  | $62   | 3     | 6
 
 
 
@@ -772,13 +772,13 @@ Push to Stack
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-PHA             | Push Accumulator          | 48    | 1     | 3 | +1 if m=0
-PHB             | Push Data Bank            | 8B    | 1     | 3
-PHD             | Push Direct Page Register | 0B    | 1     | 4
-PHK             | Push Program Bank Register| 4B    | 1     | 3
-PHP             | Push Processor Status Register| 08| 1     | 3
-PHX             | Push Index Register X     | DA    | 1     | 3 | +1 if x=0
-PHY             | Push Index Register Y     | 5A    | 1     | 3 | +1 if x=0
+PHA             | Push Accumulator          | $48   | 1     | 3 | +1 if m=0
+PHB             | Push Data Bank            | $8B   | 1     | 3
+PHD             | Push Direct Page Register | $0B   | 1     | 4
+PHK             | Push Program Bank Register| $4B   | 1     | 3
+PHP             | Push Processor Status Register| $08| 1     | 3
+PHX             | Push Index Register X     | $DA   | 1     | 3 | +1 if x=0
+PHY             | Push Index Register Y     | $5A   | 1     | 3 | +1 if x=0
 
 
 
@@ -819,12 +819,12 @@ byte of the index registers will be set to 0.
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-PLA             | Pull Accumulator          | 68    | 1     | 4 | +1 if m=0
-PLB             | Pull Data Bank            | AB    | 1     | 4
-PLD             | Pull Direct Page Register | 2B    | 1     | 5
-PLP             | Pull Processor Status Register| 28| 1     | 4
-PLX             | Pull Index Register X     | FA    | 1     | 4 | +1 if x=0
-PLY             | Pull Index Register Y     | 7A    | 1     | 4 | +1 if x=0
+PLA             | Pull Accumulator          | $68   | 1     | 4 | +1 if m=0
+PLB             | Pull Data Bank            | $AB   | 1     | 4
+PLD             | Pull Direct Page Register | $2B   | 1     | 5
+PLP             | Pull Processor Status Register| $28| 1     | 4
+PLX             | Pull Index Register X     | $FA   | 1     | 4 | +1 if x=0
+PLY             | Pull Index Register Y     | $7A   | 1     | 4 | +1 if x=0
 
 
 
@@ -844,7 +844,7 @@ REP - Reset Status Bits
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-REP #const      | Immediate                 | C2    | 2     | 3
+REP #const      | Immediate                 | $C2   | 2     | 3
 
 
 
@@ -862,11 +862,11 @@ ROL - Rotate Left
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-ROL             | Accumulator               | 2A    | 1     | 2
-ROL addr        | Absolute                  | 2E    | 3     | 6 | +1 if m=0
-ROL dp          | Direct Page               | 26    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ROL addr, X     | Absolute Indexed, X       | 3E    | 3     | 7 | +1 if m=0
-ROL dp, X       | Direct Page Indexed, X    | 36    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ROL             | Accumulator               | $2A   | 1     | 2
+ROL addr        | Absolute                  | $2E   | 3     | 6 | +1 if m=0
+ROL dp          | Direct Page               | $26   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+ROL addr, X     | Absolute Indexed, X       | $3E   | 3     | 7 | +1 if m=0
+ROL dp, X       | Direct Page Indexed, X    | $36   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -884,11 +884,11 @@ ROR - Rotate Right
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-ROR             | Accumulator               | 6A    | 1     | 2
-ROR addr        | Absolute                  | 6E    | 3     | 6 | +1 if m=0
-ROR dp          | Direct Page               | 66    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-ROR addr, X     | Absolute Indexed, X       | 7E    | 3     | 7 | +1 if m=0
-ROR dp, X       | Direct Page Indexed, X    | 76    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+ROR             | Accumulator               | $6A   | 1     | 2
+ROR addr        | Absolute                  | $6E   | 3     | 6 | +1 if m=0
+ROR dp          | Direct Page               | $66   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+ROR addr, X     | Absolute Indexed, X       | $7E   | 3     | 7 | +1 if m=0
+ROR dp, X       | Direct Page Indexed, X    | $76   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -918,7 +918,7 @@ the index registers will be set to 0.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-RTI             | Stack (return interrupt)  | 40    | 1     | 6 | +1 if e=0
+RTI             | Stack (return interrupt)  | $40   | 1     | 6 | +1 if e=0
 
 
 
@@ -944,8 +944,8 @@ RTS, RTL - Return From Subroutine
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-RTS             | Stack (return)            | 60    | 1     | 6
-RTL             | Stack (return long)       | 6B    | 1     | 6
+RTS             | Stack (return)            | $60   | 1     | 6
+RTL             | Stack (return long)       | $6B   | 1     | 6
 
 
 
@@ -964,21 +964,21 @@ SBC - Subtract with Borrow from Accumulator
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-SBC #const      | Immediate                 | E9    | 2 / 3 | 2 | +1 if m=0
-SBC addr        | Absolute                  | ED    | 3     | 4 | +1 if m=0
-SBC long        | Absolute Long             | EF    | 4     | 5 | +1 if m=0
-SBC dp          | Direct Page               | E5    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-SBC (dp)        | Direct Page Indirect      | F2    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-SBC [dp]        | Direct Page Indirect Long | E7    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-SBC addr, X     | Absolute Indexed, X       | FD    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-SBC long, X     | Absolute Long Indexed, X  | FF    | 4     | 5 | +1 if m=0
-SBC addr, Y     | Absolute Indexed, Y       | F9    | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
-SBC dp, X       | Direct Page Indexed, X    | F5    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-SBC (dp, X)     | Direct Page Indirect, X   | E1    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-SBC (dp), Y     | DP Indirect Indexed, Y    | F1    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
-SBC [dp], Y     | DP Indirect Long Indexed, Y | F7  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-SBC sr, S       | Stack Relative            | E3    | 2     | 4 | +1 if m=0
-SBC (sr, S), Y  | SR Indirect Indexed, Y    | F3    | 2     | 7 | +1 if m=0
+SBC #const      | Immediate                 | $E9   | 2 / 3 | 2 | +1 if m=0
+SBC addr        | Absolute                  | $ED   | 3     | 4 | +1 if m=0
+SBC long        | Absolute Long             | $EF   | 4     | 5 | +1 if m=0
+SBC dp          | Direct Page               | $E5   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+SBC (dp)        | Direct Page Indirect      | $F2   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+SBC [dp]        | Direct Page Indirect Long | $E7   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+SBC addr, X     | Absolute Indexed, X       | $FD   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+SBC long, X     | Absolute Long Indexed, X  | $FF   | 4     | 5 | +1 if m=0
+SBC addr, Y     | Absolute Indexed, Y       | $F9   | 3     | 4 | +1 if m=0, +1 if index crosses page boundary
+SBC dp, X       | Direct Page Indexed, X    | $F5   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+SBC (dp, X)     | Direct Page Indirect, X   | $E1   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+SBC (dp), Y     | DP Indirect Indexed, Y    | $F1   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0, +1 if index crosses page boundary
+SBC [dp], Y     | DP Indirect Long Indexed, Y | $F7 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+SBC sr, S       | Stack Relative            | $E3   | 2     | 4 | +1 if m=0
+SBC (sr, S), Y  | SR Indirect Indexed, Y    | $F3   | 2     | 7 | +1 if m=0
 
 
 
@@ -1000,9 +1000,9 @@ Set Status Flags
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-SEC             | Set Carry Flag            | 38    | 1     | 2
-SEI             | Set Interrupt Disable Flag | 78 | 1     | 2
-SED             | Set Decimal Flag          | F8    | 1     | 2
+SEC             | Set Carry Flag            | $38   | 1     | 2
+SEI             | Set Interrupt Disable Flag | $78  | 1     | 2
+SED             | Set Decimal Flag          | $F8   | 1     | 2
 
 
 
@@ -1019,7 +1019,7 @@ the index registers will be set to 0.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-SEP #const      | Immediate                 | E2    | 2     | 3
+SEP #const      | Immediate                 | $E2   | 2     | 3
 
 
 
@@ -1033,20 +1033,20 @@ STA - Store Accumulator to Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-STA addr        | Absolute                  | 8D    | 3     | 4 | +1 if m=0
-STA long        | Absolute Long             | 8F    | 4     | 5 | +1 if m=0
-STA dp          | Direct Page               | 85    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-STA (dp)        | Direct Page Indirect      | 92    | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
-STA [dp]        | Direct Page Indirect Long | 87    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-STA addr, X     | Absolute Indexed, X       | 9D    | 3     | 5 | +1 if m=0
-STA long, X     | Absolute Long Indexed, X  | 9F    | 4     | 5 | +1 if m=0
-STA addr, Y     | Absolute Indexed, Y       | 99    | 3     | 5 | +1 if m=0
-STA dp, X       | Direct Page Indexed, X    | 95    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
-STA (dp, X)     | Direct Page Indirect, X   | 81    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-STA (dp), Y     | DP Indirect Indexed, Y    | 91    | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-STA [dp], Y     | DP Indirect Long Indexed, Y | 97  | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
-STA sr, S       | Stack Relative            | 83    | 2     | 4 | +1 if m=0
-STA (sr, S), Y  | SR Indirect Indexed, Y    | 93    | 2     | 7 | +1 if m=0
+STA addr        | Absolute                  | $8D   | 3     | 4 | +1 if m=0
+STA long        | Absolute Long             | $8F   | 4     | 5 | +1 if m=0
+STA dp          | Direct Page               | $85   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+STA (dp)        | Direct Page Indirect      | $92   | 2     | 5 | +1 if m=0, +1 if DP.l ≠ 0
+STA [dp]        | Direct Page Indirect Long | $87   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+STA addr, X     | Absolute Indexed, X       | $9D   | 3     | 5 | +1 if m=0
+STA long, X     | Absolute Long Indexed, X  | $9F   | 4     | 5 | +1 if m=0
+STA addr, Y     | Absolute Indexed, Y       | $99   | 3     | 5 | +1 if m=0
+STA dp, X       | Direct Page Indexed, X    | $95   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+STA (dp, X)     | Direct Page Indirect, X   | $81   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+STA (dp), Y     | DP Indirect Indexed, Y    | $91   | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+STA [dp], Y     | DP Indirect Long Indexed, Y | $97 | 2     | 6 | +1 if m=0, +1 if DP.l ≠ 0
+STA sr, S       | Stack Relative            | $83   | 2     | 4 | +1 if m=0
+STA (sr, S), Y  | SR Indirect Indexed, Y    | $93   | 2     | 7 | +1 if m=0
 
 
 
@@ -1062,7 +1062,7 @@ Note, this instruction can cause some builds of snes9x to freeze.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-STP             | Implied                   | DB    | 1     | 3
+STP             | Implied                   | $DB   | 1     | 3
 
 
 
@@ -1076,9 +1076,9 @@ STX - Store Index Register X to Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-STX addr        | Absolute                  | 8E    | 3     | 4 | +1 if x=0
-STX dp          | Direct Page               | 86    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
-STX dp, Y       | Direct Page Indexed, Y    | 96    | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
+STX addr        | Absolute                  | $8E   | 3     | 4 | +1 if x=0
+STX dp          | Direct Page               | $86   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+STX dp, Y       | Direct Page Indexed, Y    | $96   | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -1092,9 +1092,9 @@ STY - Store Index Register Y to Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-STY addr        | Absolute                  | 8C    | 3     | 4 | +1 if x=0
-STY dp          | Direct Page               | 84    | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
-STY dp, X       | Direct Page Indexed, X    | 94    | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
+STY addr        | Absolute                  | $8C   | 3     | 4 | +1 if x=0
+STY dp          | Direct Page               | $84   | 2     | 3 | +1 if x=0, +1 if DP.l ≠ 0
+STY dp, X       | Direct Page Indexed, X    | $94   | 2     | 4 | +1 if x=0, +1 if DP.l ≠ 0
 
 
 
@@ -1108,10 +1108,10 @@ STZ - Store Zero to Memory
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-STZ addr        | Absolute                  | 9C    | 3     | 4 | +1 if m=0
-STZ dp          | Direct Page               | 64    | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
-STZ addr, X     | Absolute Indexed, X       | 9E    | 3     | 5 | +1 if m=0
-STZ dp, X       | Direct Page Indexed, X    | 74    | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
+STZ addr        | Absolute                  | $9C   | 3     | 4 | +1 if m=0
+STZ dp          | Direct Page               | $64   | 2     | 3 | +1 if m=0, +1 if DP.l ≠ 0
+STZ addr, X     | Absolute Indexed, X       | $9E   | 3     | 5 | +1 if m=0
+STZ dp, X       | Direct Page Indexed, X    | $74   | 2     | 4 | +1 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -1146,18 +1146,18 @@ The number of bits transferred depends on the state of the m, x and e flags:
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-TAX             | Transfer A to X           | AA    | 1     | 2
-TAY             | Transfer A to Y           | A8    | 1     | 2
-TCD             | Transfer 16 bit A to DP   | 5B    | 1     | 2
-TCS             | Transfer 16 bit A to SP   | 1B    | 1     | 2
-TDC             | Transfer DP to 16 bit A   | 7B    | 1     | 2
-TSC             | Transfer SP to 16 bit A   | 3B    | 1     | 2
-TSX             | Transfer SP to X          | BA    | 1     | 2
-TXA             | Transfer X to A           | 8A    | 1     | 2
-TXS             | Transfer X to SP          | 9A    | 1     | 2
-TXY             | Transfer X to Y           | 9B    | 1     | 2
-TYA             | Transfer Y to A           | 98    | 1     | 2
-TYX             | Transfer Y to X           | BB    | 1     | 2
+TAX             | Transfer A to X           | $AA   | 1     | 2
+TAY             | Transfer A to Y           | $A8   | 1     | 2
+TCD             | Transfer 16 bit A to DP   | $5B   | 1     | 2
+TCS             | Transfer 16 bit A to SP   | $1B   | 1     | 2
+TDC             | Transfer DP to 16 bit A   | $7B   | 1     | 2
+TSC             | Transfer SP to 16 bit A   | $3B   | 1     | 2
+TSX             | Transfer SP to X          | $BA   | 1     | 2
+TXA             | Transfer X to A           | $8A   | 1     | 2
+TXS             | Transfer X to SP          | $9A   | 1     | 2
+TXY             | Transfer X to Y           | $9B   | 1     | 2
+TYA             | Transfer Y to A           | $98   | 1     | 2
+TYX             | Transfer Y to X           | $BB   | 1     | 2
 
 
 
@@ -1174,8 +1174,8 @@ TRB - Test and Reset Memory Bits Against Accumulator
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-TRB addr        | Absolute                  | 1C    | 3     | 6 | +2 if m=0
-TRB dp          | Direct Page               | 14    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
+TRB addr        | Absolute                  | $1C   | 3     | 6 | +2 if m=0
+TRB dp          | Direct Page               | $14   | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -1191,8 +1191,8 @@ TSB - Test and Set Memory Bits Against Accumulator
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-TSB addr        | Absolute                  | 0C    | 3     | 6 | +2 if m=0
-TSB dp          | Direct Page               | 04    | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
+TSB addr        | Absolute                  | $0C   | 3     | 6 | +2 if m=0
+TSB dp          | Direct Page               | $04   | 2     | 5 | +2 if m=0, +1 if DP.l ≠ 0
 
 
 
@@ -1216,7 +1216,7 @@ handler.
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-WAI             | Implied                   | CB    | 1     | 3 | additional cycles needed by interrupt handler to restart the processor
+WAI             | Implied                   | $CB   | 1     | 3 | additional cycles needed by interrupt handler to restart the processor
 
 
 
@@ -1242,7 +1242,7 @@ while other assemblers use `wdm 1`.
 </tr>
 </thead>
 <tbody>
-<tr><td>WDM #const</td><td rowspan="2"></td><td rowspan="2">42</td><td rowspan="2">2</td><td rowspan="2">2</td><td rowspan="2"></td></tr>
+<tr><td>WDM #const</td><td rowspan="2"></td><td rowspan="2">$42</td><td rowspan="2">2</td><td rowspan="2">2</td><td rowspan="2"></td></tr>
 <tr><td>WDM param</td></tr>
 </tbody>
 </table>
@@ -1264,7 +1264,7 @@ XBA - Exchange the B and A Accumulators
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-XBA             | Implied                   | EB    | 1     | 3
+XBA             | Implied                   | $EB   | 1     | 3
 
 
 
@@ -1291,7 +1291,7 @@ Note: Emulation mode will set bit 4 (x) of the status register, which will also 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------|---------------------------|-------|-------|--------|--------
-XCE             | Implied                   | FB    | 1     | 2
+XCE             | Implied                   | $FB   | 1     | 2
 
 
 Sources
