@@ -606,6 +606,9 @@ NOTES:
     * `Y` = the byte after the end of the destination block.
  * If bit 4 (x) of the status register is set, `MVN` will only be able
    to access the first page of the source and destination banks.
+ * Block move instructions can be interrupted.  The move will resume after the
+   <abbr title="Interrupt Service Routine">ISR</abbr> returns, provided the
+   `C`, `X`, `Y` registers, Program Counter and `MVN` instruction are unchanged.
  * `MVN` should be used if the blocks do not overlap or if the destination address
    is less than (more negative than) the source address.
  * `MVN` can be used to fill an array or memory block:
@@ -657,6 +660,9 @@ NOTES:
     * `Y` = the byte before the start of the destination block.
  * If bit 4 (x) of the status register is set, `MVP` will only be able
    to access the first page of the source and destination banks.
+ * Block move instructions can be interrupted.  The move will resume after the
+   <abbr title="Interrupt Service Routine">ISR</abbr> returns, provided the
+   `C`, `X`, `Y` registers, Program Counter and `MVP` instruction are unchanged.
  * `MVP` should be used if the blocks could overlap and the destination address
    is greater than (more positive[^mvp-more-positive] than) the source address.
 
