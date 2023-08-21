@@ -577,6 +577,8 @@ LSR dp, X       | Direct Page Indexed, X    | $56   | 2     | 6 | +1 if m=0, +1 
 MVN - Block Move Next
 =====================
 
+This instruction is also known as **Block Move Negative**.
+
 **Flags affected**: `--------`
 
 **Parameters:**
@@ -604,8 +606,8 @@ NOTES:
     * `Y` = the byte after the end of the destination block.
  * If bit 4 (x) of the status register is set, `MVN` will only be able
    to access the first page of the source and destination banks.
- * `MVN` should be used if the blocks do not overlap or if the
-   destination address is less than the source address.
+ * `MVN` should be used if the blocks do not overlap or if the destination address
+   is less than (more negative than) the source address.
  * `MVN` can be used to fill an array or memory block:
 
         set value of first element
@@ -625,6 +627,8 @@ MVN srcBank, destBank | Block Move                | $54   | 3     |  | 7 per byt
 
 MVP - Block Move Previous
 =========================
+
+This instruction is also known as **Block Move Positive**.
 
 **Flags affected**: `--------`
 
@@ -653,14 +657,18 @@ NOTES:
     * `Y` = the byte before the start of the destination block.
  * If bit 4 (x) of the status register is set, `MVP` will only be able
    to access the first page of the source and destination banks.
- * `MVP` should be used if the blocks could overlap and the source
-   address is less than the destination address.
+ * `MVP` should be used if the blocks could overlap and the destination address
+   is greater than (more positive[^mvp-more-positive] than) the source address.
 
 
 Syntax                | Addressing Mode           | Opcode| Bytes | Cycles | Extra
 ----------------------|---------------------------|-------|-------|--------|--------
 MVP srcBank, destBank | Block Move                | $44   | 3     |  | 7 per byte moved
 
+
+[^mvp-more-positive]: MVP more positive source: W65C816S 8/16–bit Microprocessor Datasheet,
+    Table 5-7 Instruction Operation, 9b Block Move Positive,
+    by Western Design Center, Inc
 
 
 NOP - No Operation
