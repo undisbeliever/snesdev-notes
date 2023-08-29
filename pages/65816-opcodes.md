@@ -118,18 +118,18 @@ Branches
 <br/>`PC` ← `PC + label`
 
 
-Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
-----------------|---------------------------|-------|-------|--------|--------
-BCC near        | Branch if Carry Clear     | $90   | 2     | 2 | +1 if branch taken, +1 if e=1
-BCS near        | Branch if Carry Set       | $B0   | 2     | 2 | +1 if branch taken, +1 if e=1
-BEQ near        | Branch if Equal (z flag=1)| $F0   | 2     | 2 | +1 if branch taken, +1 if e=1
-BNE near        | Branch if Not Equal (z=0) | $D0   | 2     | 2 | +1 if branch taken, +1 if e=1
-BMI near        | Branch if Minus           | $30   | 2     | 2 | +1 if branch taken, +1 if e=1
-BPL near        | Branch if Plus            | $10   | 2     | 2 | +1 if branch taken, +1 if e=1
-BVC near        | Branch if Overflow Clear  | $50   | 2     | 2 | +1 if branch taken, +1 if e=1
-BVS near        | Branch if Overflow Set    | $70   | 2     | 2 | +1 if branch taken, +1 if e=1
-BRA near        | Branch Always             | $80   | 2     | 3 | +1 if e=1
-BRL label       | Branch Always Long        | $82 | 3    | 4
+Syntax          | Name                      | Condition       |     | Opcode| Bytes | Cycles | Extra
+----------------|---------------------------|-----------------|-----|-------|-------|--------|--------
+BCC near        | Branch if Carry Clear     | carry clear     | c=0 | $90   | 2     | 2 | +1 if branch taken, +1 if e=1
+BCS near        | Branch if Carry Set       | carry set       | c=1 | $B0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BEQ near        | Branch if Equal           | zero set        | z=1 | $F0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BNE near        | Branch if Not Equal       | zero clear      | z=0 | $D0   | 2     | 2 | +1 if branch taken, +1 if e=1
+BMI near        | Branch if Minus           | negative set    | n=1 | $30   | 2     | 2 | +1 if branch taken, +1 if e=1
+BPL near        | Branch if Plus            | negative clear  | n=0 | $10   | 2     | 2 | +1 if branch taken, +1 if e=1
+BVC near        | Branch if Overflow Clear  | overflow clear  | v=0 | $50   | 2     | 2 | +1 if branch taken, +1 if e=1
+BVS near        | Branch if Overflow Set    | overflow set    | v=1 | $70   | 2     | 2 | +1 if branch taken, +1 if e=1
+BRA near        | Branch Always             | always          |     | $80   | 2     | 3 | +1 if e=1
+BRL label       | Branch Always Long        | always          |     | $82   | 3     | 4
 
 
 
