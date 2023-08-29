@@ -763,8 +763,8 @@ license-url: https://creativecommons.org/licenses/by-sa/4.0/
 Sources
 =======
  * Anomie's Register Doc
- * [higan](https://higan.dev/) source code,
+ * [higan](https://github.com/higan-emu/higan/) source code,
    [sfc/ppu/io.cpp](https://github.com/higan-emu/higan/blob/master/higan/sfc/ppu/io.cpp) and
    [sfc/cpu/io.cpp](https://github.com/higan-emu/higan/blob/master/higan/sfc/cpu/io.cpp),
-   by [Near](https://near.sh/)
+   by Near
 
