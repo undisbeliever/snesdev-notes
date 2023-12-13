@@ -163,30 +163,30 @@ Software Interrupts
 **Flags affected**: `----di--`
 
 **Native Mode:**
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 4`
-<br/><tt>[SP+4]</tt> ← `PB`
-<br/><tt>[SP+3]</tt> ← `PC.h`
-<br/><tt>[SP+2]</tt> ← `PC.l`
-<br/><tt>[SP+1]</tt> ← `P`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 4`
+<br/><tt>[S+4]</tt> ← `PB`
+<br/><tt>[S+3]</tt> ← `PC.h`
+<br/><tt>[S+2]</tt> ← `PC.l`
+<br/><tt>[S+1]</tt> ← `P`
 <br/>
-<br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
 <br/>
-<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
+<br/><tt>PB&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
 **Emulation Mode:**
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 3`
-<br/><tt>[SP+3]</tt> ← `PC.h`
-<br/><tt>[SP+2]</tt> ← `PC.l`
-<br/><tt>[SP+1]</tt> ← `P`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 3`
+<br/><tt>[S+3]</tt> ← `PC.h`
+<br/><tt>[S+2]</tt> ← `PC.l`
+<br/><tt>[S+1]</tt> ← `P`
 <br/>
-<br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
 <br/>
-<br/><tt>PB&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
+<br/><tt>PB&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -450,19 +450,19 @@ JSR, JSL - Jump to Subroutine
 **Flags affected**: `--------`
 
 **JSR:**
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 2`
-<br/><tt>[SP+2]</tt> ← `PC.h`
-<br/><tt>[SP+1]</tt> ← `PC.l`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `M`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
+<br/><tt>[S+2]</tt> ← `PC.h`
+<br/><tt>[S+1]</tt> ← `PC.l`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `M`
 
 **JSL:**
-<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 3`
-<br/><tt>[SP+3]</tt> ← `PB`
-<br/><tt>[SP+2]</tt> ← `PC.h`
-<br/><tt>[SP+1]</tt> ← `PC.l`
-<br/><tt>PB:PC&nbsp;</tt> ← `M`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 3`
+<br/><tt>[S+3]</tt> ← `PB`
+<br/><tt>[S+2]</tt> ← `PC.h`
+<br/><tt>[S+1]</tt> ← `PC.l`
+<br/><tt>PB:PC</tt> ← `M`
 
 
 <br/>
@@ -727,9 +727,9 @@ PEA - Push Effective Absolute Address
 
 **Flags affected**: `--------`
 
-<tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 2`
-<br/><tt>[SP+2]</tt> ← `addr.h`
-<br/><tt>[SP+1]</tt> ← `addr.l`
+<tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
+<br/><tt>[S+2]</tt> ← `addr.h`
+<br/><tt>[S+1]</tt> ← `addr.l`
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -743,9 +743,9 @@ PEI - Push Effective Indirect Address
 
 **Flags affected**: `--------`
 
-<tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 2`
-<br/><tt>[SP+2]</tt> ← `[0:D+dp+1]`
-<br/><tt>[SP+1]</tt> ← `[0:D+dp]`
+<tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
+<br/><tt>[S+2]</tt> ← `[0:D+dp+1]`
+<br/><tt>[S+1]</tt> ← `[0:D+dp]`
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -760,10 +760,10 @@ PER - Push Effective PC Relative Indirect Address
 
 **Flags affected**: `--------`
 
-<tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 2`
+<tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
 <br/><tt>T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `PC + Label`
-<br/><tt>[SP+2]</tt> ← `T.h`
-<br/><tt>[SP+1]</tt> ← `T.l`
+<br/><tt>[S+2]</tt> ← `T.h`
+<br/><tt>[S+1]</tt> ← `T.l`
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -778,13 +778,13 @@ Push to Stack
 **Flags affected**: `--------`
 
 **8 bit register:**
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 1`
-<br/><tt>[SP+1]</tt> ← `R`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 1`
+<br/><tt>[S+1]</tt> ← `R`
 
 **16 bit register:**
-<br/><tt>SP&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `SP - 2`
-<br/><tt>[SP+2]</tt> ← `R.h`
-<br/><tt>[SP+1]</tt> ← `R.l`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
+<br/><tt>[S+2]</tt> ← `R.h`
+<br/><tt>[S+1]</tt> ← `R.l`
 
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
@@ -806,27 +806,27 @@ Pull from Stack
 <br/>**Flags affected (`PLP`)**: `nvmxdizc`
 
 **8 bit register:**
-<br/><tt>R&nbsp;&nbsp;</tt> ← `[SP+1]`
-<br/><tt>SP&nbsp;</tt> ← `SP + 1`
+<br/><tt>R&nbsp;&nbsp;</tt> ← `[S+1]`
+<br/><tt>S&nbsp;&nbsp;</tt> ← `S + 1`
 <br/>
 <br/><tt>n&nbsp;&nbsp;</tt> ← Most significant bit of register
 <br/><tt>z&nbsp;&nbsp;</tt> ← Set if the register is zero
 
 **16 bit register:**
-<br/><tt>R.l</tt> ← `[SP+1]`
-<br/><tt>R.h</tt> ← `[SP+2]`
-<br/><tt>SP&nbsp;</tt> ← `SP + 2`
+<br/><tt>R.l</tt> ← `[S+1]`
+<br/><tt>R.h</tt> ← `[S+2]`
+<br/><tt>S&nbsp;&nbsp;</tt> ← `S + 2`
 <br/>
 <br/><tt>n&nbsp;&nbsp;</tt> ← Most significant bit of register
 <br/><tt>z&nbsp;&nbsp;</tt> ← Set if the register is zero
 
 **PLP (Native Mode):**
-<br/><tt>P&nbsp;&nbsp;</tt> ← `[SP+1]`
-<br/><tt>SP&nbsp;</tt> ← `SP + 1`
+<br/><tt>P&nbsp;&nbsp;</tt> ← `[S+1]`
+<br/><tt>S&nbsp;&nbsp;</tt> ← `S + 1`
 
 **PLP (Emulation Mode):**
-<br/><tt>P&nbsp;&nbsp;</tt> ← `[SP+1]`
-<br/><tt>SP&nbsp;</tt> ← `SP + 1`
+<br/><tt>P&nbsp;&nbsp;</tt> ← `[S+1]`
+<br/><tt>S&nbsp;&nbsp;</tt> ← `S + 1`
 <br/><tt>x&nbsp;&nbsp;</tt> ← `1`
 <br/><tt>m&nbsp;&nbsp;</tt> ← `1`
 
@@ -915,19 +915,19 @@ RTI - Return From Interrupt
 **Flags affected**: `nvmxdizc`
 
 **Native Mode:**
-<br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[SP+1]`
-<br/><tt>PC.l</tt> ← `[SP+2]`
-<br/><tt>PC.h</tt> ← `[SP+3]`
-<br/><tt>DB&nbsp;&nbsp;</tt> ← `[SP+4]`
-<br/><tt>SP&nbsp;&nbsp;</tt> ← `SP + 4`
+<br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[S+1]`
+<br/><tt>PC.l</tt> ← `[S+2]`
+<br/><tt>PC.h</tt> ← `[S+3]`
+<br/><tt>DB&nbsp;&nbsp;</tt> ← `[S+4]`
+<br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 4`
 
 **Emulation Mode:**
-<br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[SP+1]`
+<br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[S+1]`
 <br/><tt>x&nbsp;&nbsp;&nbsp;</tt> ← `1`
 <br/><tt>m&nbsp;&nbsp;&nbsp;</tt> ← `1`
-<br/><tt>PC.l</tt> ← `[SP+2]`
-<br/><tt>PC.h</tt> ← `[SP+3]`
-<br/><tt>SP&nbsp;&nbsp;</tt> ← `SP + 3`
+<br/><tt>PC.l</tt> ← `[S+2]`
+<br/><tt>PC.h</tt> ← `[S+3]`
+<br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 3`
 
 Note: If bit 4 (x) of the status register is set, then the high byte of
 the index registers will be set to 0.
@@ -945,16 +945,16 @@ RTS, RTL - Return From Subroutine
 **Flags affected**: `--------`
 
 **RTS:**
-<br/><tt>PC.l</tt> ← `[SP+1]`
-<br/><tt>PC.h</tt> ← `[SP+2]`
-<br/><tt>SP&nbsp;&nbsp;</tt> ← `SP + 2`
+<br/><tt>PC.l</tt> ← `[S+1]`
+<br/><tt>PC.h</tt> ← `[S+2]`
+<br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 2`
 <br/><tt>PC&nbsp;&nbsp;</tt> ← `PC + 1`
 
 **RTL:**
-<br/><tt>PC.l</tt> ← `[SP+1]`
-<br/><tt>PC.h</tt> ← `[SP+2]`
-<br/><tt>DB&nbsp;&nbsp;</tt> ← `[SP+3]`
-<br/><tt>SP&nbsp;&nbsp;</tt> ← `SP + 3`
+<br/><tt>PC.l</tt> ← `[S+1]`
+<br/><tt>PC.h</tt> ← `[S+2]`
+<br/><tt>DB&nbsp;&nbsp;</tt> ← `[S+3]`
+<br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 3`
 <br/><tt>PC&nbsp;&nbsp;</tt> ← `PC + 1`
 
 
@@ -1158,7 +1158,7 @@ The number of bits transferred depends on the state of the m, x and e flags:
  * Stack Pointer to Accumulator: 16 bits transferred
  * A/X to Stack Pointer:
     * Native mode: 16 bits transferred
-    * Emulation mode: 8 bits transferred, high byte of SP = 1
+    * Emulation mode: 8 bits transferred, high byte of S = 1
 
 
 Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
@@ -1166,12 +1166,12 @@ Syntax          | Name                      | Opcode| Bytes | Cycles | Extra
 TAX             | Transfer A to X           | $AA   | 1     | 2
 TAY             | Transfer A to Y           | $A8   | 1     | 2
 TCD             | Transfer 16 bit A to D    | $5B   | 1     | 2
-TCS             | Transfer 16 bit A to SP   | $1B   | 1     | 2
+TCS             | Transfer 16 bit A to S    | $1B   | 1     | 2
 TDC             | Transfer D to 16 bit A    | $7B   | 1     | 2
-TSC             | Transfer SP to 16 bit A   | $3B   | 1     | 2
-TSX             | Transfer SP to X          | $BA   | 1     | 2
+TSC             | Transfer S to 16 bit A    | $3B   | 1     | 2
+TSX             | Transfer S to X           | $BA   | 1     | 2
 TXA             | Transfer X to A           | $8A   | 1     | 2
-TXS             | Transfer X to SP          | $9A   | 1     | 2
+TXS             | Transfer X to S           | $9A   | 1     | 2
 TXY             | Transfer X to Y           | $9B   | 1     | 2
 TYA             | Transfer Y to A           | $98   | 1     | 2
 TYX             | Transfer Y to X           | $BB   | 1     | 2
@@ -1295,11 +1295,11 @@ XCE - Exchange Carry and Emulation Bits
 <br/>
 <br/>
 **if e is set (Emulation Mode):**
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>m&nbsp;&nbsp;&nbsp;</tt> ← `1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>x&nbsp;&nbsp;&nbsp;</tt> ← `1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>SP.h</tt> ← `0x01`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>X.h&nbsp;</tt> ← `0x00`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>Y.h&nbsp;</tt> ← `0x00`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>m&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>x&nbsp;&nbsp;</tt> ← `1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>S.h</tt> ← `0x01`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>X.h</tt> ← `0x00`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>Y.h</tt> ← `0x00`
 
 Note: The high byte of the Stack Pointer is fixed in emulation mode.
 
