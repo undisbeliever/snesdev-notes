@@ -918,7 +918,7 @@ RTI - Return From Interrupt
 <br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[S+1]`
 <br/><tt>PC.l</tt> ← `[S+2]`
 <br/><tt>PC.h</tt> ← `[S+3]`
-<br/><tt>DB&nbsp;&nbsp;</tt> ← `[S+4]`
+<br/><tt>PB&nbsp;&nbsp;</tt> ← `[S+4]`
 <br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 4`
 
 **Emulation Mode:**
@@ -953,7 +953,7 @@ RTS, RTL - Return From Subroutine
 **RTL:**
 <br/><tt>PC.l</tt> ← `[S+1]`
 <br/><tt>PC.h</tt> ← `[S+2]`
-<br/><tt>DB&nbsp;&nbsp;</tt> ← `[S+3]`
+<br/><tt>PB&nbsp;&nbsp;</tt> ← `[S+3]`
 <br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 3`
 <br/><tt>PC&nbsp;&nbsp;</tt> ← `PC + 1`
 
