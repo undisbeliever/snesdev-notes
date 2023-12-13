@@ -164,7 +164,7 @@ Software Interrupts
 
 **Native Mode:**
 <br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 4`
-<br/><tt>[S+4]</tt> ← `PB`
+<br/><tt>[S+4]</tt> ← `PBR`
 <br/><tt>[S+3]</tt> ← `PC.h`
 <br/><tt>[S+2]</tt> ← `PC.l`
 <br/><tt>[S+1]</tt> ← `P`
@@ -172,7 +172,7 @@ Software Interrupts
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
 <br/>
-<br/><tt>PB&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PBR&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
@@ -185,7 +185,7 @@ Software Interrupts
 <br/><tt>d&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>i&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `1`
 <br/>
-<br/><tt>PB&nbsp;&nbsp;&nbsp;</tt> ← `0`
+<br/><tt>PBR&nbsp;&nbsp;</tt> ← `0`
 <br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← interrupt address
 
 
@@ -412,10 +412,10 @@ JMP, JML - Jump
 **Flags affected**: `--------`
 
 **JMP:**
-<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `M`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `M`
 
 **JML:**
-<br/><tt>PB:PC</tt> ← `M`
+<br/><tt>PBR:PC</tt> ← `M`
 
 
 <br/>
@@ -423,7 +423,7 @@ NOTES:
 
  * The `JMP (addr)` instruction will always read the new program counter from Bank 0 (ie, `JMP ($8888)` will read 2 bytes from `$00:8888`).
  * The `JML [addr]` instruction will always read the new program counter from Bank 0 (ie, `JML [$9999]` will read 3 bytes from `$00:9999`).
- * The `JMP (addr, X)` instruction will read the new program counter from the Program Bank (`PB`) (ie, `JMP ($AAAA, X)` will read 2 bytes from `PB:{$AAAA + X}`).
+ * The `JMP (addr, X)` instruction will read the new program counter from the Program Bank (`PBR`) (ie, `JMP ($AAAA, X)` will read 2 bytes from `PBR:{$AAAA + X}`).
 
 
 <table>
@@ -450,23 +450,23 @@ JSR, JSL - Jump to Subroutine
 **Flags affected**: `--------`
 
 **JSR:**
-<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
-<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
-<br/><tt>[S+2]</tt> ← `PC.h`
-<br/><tt>[S+1]</tt> ← `PC.l`
-<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `M`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 2`
+<br/><tt>[S+2]&nbsp;</tt> ← `PC.h`
+<br/><tt>[S+1]&nbsp;</tt> ← `PC.l`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `M`
 
 **JSL:**
-<br/><tt>PC&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
-<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 3`
-<br/><tt>[S+3]</tt> ← `PB`
-<br/><tt>[S+2]</tt> ← `PC.h`
-<br/><tt>[S+1]</tt> ← `PC.l`
-<br/><tt>PB:PC</tt> ← `M`
+<br/><tt>PC&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `PC - 1`
+<br/><tt>S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `S - 3`
+<br/><tt>[S+3]&nbsp;</tt> ← `PBR`
+<br/><tt>[S+2]&nbsp;</tt> ← `PC.h`
+<br/><tt>[S+1]&nbsp;</tt> ← `PC.l`
+<br/><tt>PBR:PC</tt> ← `M`
 
 
 <br/>
-NOTE: The `JSR (addr, X)` instruction will read the subroutine address from the Program Bank (`PB`) (ie, `JSR {$8888, X}` will read 2 bytes from `PB:{$8888 + X}`).
+NOTE: The `JSR (addr, X)` instruction will read the subroutine address from the Program Bank (`PBR`) (ie, `JSR {$8888, X}` will read 2 bytes from `PBR:{$8888 + X}`).
 
 
 Syntax          | Addressing Mode           | Opcode| Bytes | Cycles | Extra
@@ -918,7 +918,7 @@ RTI - Return From Interrupt
 <br/><tt>P&nbsp;&nbsp;&nbsp;</tt> ← `[S+1]`
 <br/><tt>PC.l</tt> ← `[S+2]`
 <br/><tt>PC.h</tt> ← `[S+3]`
-<br/><tt>PB&nbsp;&nbsp;</tt> ← `[S+4]`
+<br/><tt>PBR&nbsp;</tt> ← `[S+4]`
 <br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 4`
 
 **Emulation Mode:**
@@ -953,7 +953,7 @@ RTS, RTL - Return From Subroutine
 **RTL:**
 <br/><tt>PC.l</tt> ← `[S+1]`
 <br/><tt>PC.h</tt> ← `[S+2]`
-<br/><tt>PB&nbsp;&nbsp;</tt> ← `[S+3]`
+<br/><tt>PBR&nbsp;</tt> ← `[S+3]`
 <br/><tt>S&nbsp;&nbsp;&nbsp;</tt> ← `S + 3`
 <br/><tt>PC&nbsp;&nbsp;</tt> ← `PC + 1`
 
