@@ -1314,6 +1314,7 @@ XCE             | Implied                   | $FB   | 1     | 2
 Sources
 =======
  * A 65816 Primer, by Brett Tabke
+ * W65C816S 8/16–bit Microprocessor Datasheet by The Western Design Center, Inc
  * Programming the 65816, by David Eyes and Ron Lichty
  * [All_About_Your_64 - 65816 Reference](http://www.unusedino.de/ec64/technical/aay/c64/ebmain.htm),
    by Ninja/The Dreams in 1995-2005
