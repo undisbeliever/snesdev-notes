@@ -586,13 +586,13 @@ This instruction is also known as **Block Move Negative**.
 <br/>`Y`: destination address
 <br/>`C`: length - 1
 
-`DB` ← `destBank`
+`DBR` ← `destBank`
 <br/>`repeat:`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;`T`</tt> ← `srcBank:X`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;`DB:Y`</tt> ← `T`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;X</tt> ← `X + 1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;Y</tt> ← `Y + 1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;C</tt> ← `C - 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `srcBank:X`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;`DBR:Y`</tt> ← `T`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `X + 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `Y + 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `C - 1`
 <br/>`until C == 0xffff`
 
 <br/>
@@ -600,7 +600,7 @@ NOTES:
 
  * The number of bytes transferred is `C + 1`
  * After the transfer is complete:
-    * `DB` = destination bank
+    * `DBR` = destination bank
     * `C` = `0xFFFF`
     * `X` = the byte after the end of the source block
     * `Y` = the byte after the end of the destination block.
@@ -640,13 +640,13 @@ This instruction is also known as **Block Move Positive**.
 <br/>`Y`: address of last destination byte
 <br/>`C`: length - 1
 
-`DB` ← `destBank`
+`DBR` ← `destBank`
 <br/>`repeat:`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;`T`</tt> ← `srcBank:X`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;`DB:Y`</tt> ← `T`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;X</tt> ← `X - 1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;Y</tt> ← `Y - 1`
-<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;C</tt> ← `C - 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `srcBank:X`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;DBR:Y</tt> ← `T`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `X - 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;Y&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `Y - 1`
+<br/><tt>&nbsp;&nbsp;&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;</tt> ← `C - 1`
 <br/>`until C == 0xffff`
 
 <br/>
@@ -654,7 +654,7 @@ NOTES:
 
  * The number of bytes transferred is `C + 1`.
  * After the transfer is complete:
-    * `DB` = destination bank
+    * `DBR` = destination bank
     * `C` = `0xFFFF`
     * `X` = the byte before the start of the source block
     * `Y` = the byte before the start of the destination block.
