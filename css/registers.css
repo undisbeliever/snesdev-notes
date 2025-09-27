@@ -8,50 +8,47 @@ table.register-cheatsheet {
 
     text-align: center;
 
-    border: 1px solid $register-border-color;
+    border: 1px solid;
 }
 
 // Fix border around table
 table.register-cheatsheet thead {
-    border-top: 1px solid $register-border-color;
+    border-top: 1px solid;
 }
 table.register-cheatsheet tr {
-    border-right: 1px solid $register-border-color;
+    border-right: 1px solid;
 }
 table.register-cheatsheet tr:last-child {
-    border-bottom: 1px solid $register-border-color;
+    border-bottom: 1px solid;
 }
 
 
 // Cell borders
 table.register-cheatsheet col.address {
-    border-left: 1px solid $register-border-color;
-    border-right: 1px solid $register-bits-color;
+    border-left: 1px solid;
+    border-right: 1px solid;
 }
 table.register-cheatsheet col.timing,
 table.register-cheatsheet col.register {
-    border-right: 1px solid $register-border-color;
+    border-right: 1px solid;
 }
 
 table.register-cheatsheet col.bits {
-    border: 1px solid $register-bits-color;
+    border: 1px solid;
 }
 
 table.register-cheatsheet tr.reg {
-    border-top: 1px solid $register-border-color;
+    border-top: 1px solid;
 }
 
 table.register-cheatsheet tr.reg-bits {
-    border-top: 1px solid $register-bits-color;
+    border-top: 1px solid;
 }
 
 
 // disable background color
 table.register-cheatsheet tr {
     background-color: unset !important;
-}
-table.register-cheatsheet th {
-    background-color: $register-th-color;
 }
 
 table.register-cheatsheet th,
@@ -98,5 +95,88 @@ table.register th {
 
 figure.fixed-width {
     width: 70%;
+}
+
+
+/* Light theme */
+
+table.register-cheatsheet,
+table.register-cheatsheet th {
+    border-color: $register-border-color;
+}
+table.register-cheatsheet thead {
+    border-top-color: $register-border-color;
+}
+table.register-cheatsheet tr {
+    border-right-color: $register-border-color;
+}
+table.register-cheatsheet tr:last-child {
+    border-bottom-color: $register-border-color;
+}
+
+
+table.register-cheatsheet tr.reg {
+    border-color: $register-border-color;
+}
+
+table.register-cheatsheet col.timing,
+table.register-cheatsheet col.register {
+    border-right-color: $register-border-color;
+}
+table.register-cheatsheet col.address {
+    border-left-color: $register-border-color;
+    border-right-color: $register-bits-color;
+}
+
+table.register-cheatsheet col.bits,
+table.register-cheatsheet tr.reg-bits {
+    border-color: $register-bits-color;
+}
+
+table.register-cheatsheet th {
+    background-color: $register-th-color;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+
+table.register-cheatsheet,
+table.register-cheatsheet th {
+    border-color: $register-border-dark;
+}
+table.register-cheatsheet thead {
+    border-top-color: $register-border-dark;
+}
+table.register-cheatsheet tr {
+    border-right-color: $register-border-dark;
+}
+table.register-cheatsheet tr:last-child {
+    border-bottom-color: $register-border-dark;
+}
+
+
+table.register-cheatsheet tr.reg {
+    border-color: $register-border-dark;
+}
+
+table.register-cheatsheet col.timing,
+table.register-cheatsheet col.register {
+    border-right-color: $register-border-dark;
+}
+table.register-cheatsheet col.address {
+    border-left-color: $register-border-dark;
+    border-right-color: $register-bits-dark;
+}
+
+table.register-cheatsheet col.bits,
+table.register-cheatsheet tr.reg-bits {
+    border-color: $register-bits-dark;
+}
+
+table.register-cheatsheet th {
+    background-color: $register-th-dark;
+}
+
 }
 

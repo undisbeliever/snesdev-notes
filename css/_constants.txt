@@ -3,3 +3,7 @@ register-th-color       = #eee;
 register-border-color   = #444;
 register-bits-color     = #aaa;
 
+register-th-dark        = #333;
+register-border-dark    = #ddd;
+register-bits-dark      = #666;
+
